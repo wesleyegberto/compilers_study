@@ -1,0 +1,79 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = Java
+ScannerName = LexerAnalyzer
+ParserName = SyntaticAnalyzer
+SemanticName = SemanticAnalyzer
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = Stream
+Parser = LALR
+#RegularDefinitions
+num : [0-9]+
+real : [0-9]+"."[0-9]+
+id : [a-zA-Z][a-zA-Z0-9]*
+skip : (\s| \n | \t)+
+#Tokens
+// Tokens
+
+if
+else
+while
+for
+program
+
+COUNTER : "i"
+OP_REL : "<" | "<=" | ">" | ">=" | "==" | "!="
+OP_ASSIGN : "="
+OP_ARIT_LO : "+" | "-"
+OP_ARIT_HI : "*" | "/"
+OP_BOOL : "and" | "or"
+VAR : {num} | {real}
+LCURB : "{"
+RCURB : "}"
+LPAR : "("
+RPAR : ")"
+SECO : ";"
+ID : {id}
+ : {skip}
+#NonTerminals
+<START>
+<PGM>
+<STMT_LIST>
+<STMT>
+<CTRL_FLUXO>
+<IF>
+<ELSE>
+<FOR>
+<WHILE>
+<FUNCTION>
+<PARAMS>
+<EXP_BOOL>
+<MORE_EXP_BOOL>
+<EXP>
+<MORE_TERM>
+<TERM>
+<MORE_FACTOR>
+<FACTOR>
+<OP_ARIT>
+#Grammar
+<START> ::= <PGM> ;
+<PGM> ::= program LCURB <STMT_LIST> RCURB ;
+<STMT_LIST> ::= <STMT> <STMT_LIST> | <STMT> ;
+<STMT> ::= <CTRL_FLUXO> | <FUNCTION> SECO ;
+<CTRL_FLUXO> ::= <IF> | <FOR> | <WHILE> ;
+<IF> ::= if LPAR <EXP_BOOL> RPAR LCURB <STMT_LIST> RCURB <ELSE> | if LPAR <EXP_BOOL> RPAR LCURB <STMT_LIST> RCURB ;
+<ELSE> ::= else LCURB <STMT_LIST> RCURB ;
+<FOR> ::= for LPAR COUNTER OP_ASSIGN <EXP> SECO COUNTER OP_REL <EXP> SECO COUNTER OP_ASSIGN COUNTER <OP_ARIT> <EXP> RPAR LCURB <STMT_LIST> RCURB ;
+<WHILE> ::= while LPAR <EXP_BOOL> RPAR LCURB <STMT_LIST> RCURB ;
+<FUNCTION> ::= ID LPAR <PARAMS> RPAR | ID LPAR RPAR ;
+<PARAMS> ::= VAR ;
+<EXP_BOOL> ::= <EXP> OP_REL <EXP> <MORE_EXP_BOOL> | <EXP> OP_REL <EXP> ;
+<MORE_EXP_BOOL> ::= OP_BOOL <EXP_BOOL>;
+<EXP> ::= <TERM> <MORE_TERM> | <TERM> ;
+<MORE_TERM> ::= OP_ARIT_LO <TERM> | OP_ARIT_LO <TERM> <MORE_TERM> ;
+<TERM> ::= <FACTOR> <MORE_FACTOR> | <FACTOR> ;
+<MORE_FACTOR> ::= OP_ARIT_HI <FACTOR> <MORE_FACTOR> | OP_ARIT_HI <FACTOR> ;
+<FACTOR> ::= VAR | <FUNCTION> ;
+<OP_ARIT> ::= OP_ARIT_LO | OP_ARIT_HI ;
