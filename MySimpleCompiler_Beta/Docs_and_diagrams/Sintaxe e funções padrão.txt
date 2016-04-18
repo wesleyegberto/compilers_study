@@ -1,0 +1,59 @@
+
+[Sintaxe]
+if(<expressão boleana>) {}
+while(<expressão boleana>) {}
+for(<declaracao>; <expressão boleana>; <passo>) {}
+
+[Funções padrão]
+> Movimentos
+viraEsquerda()
+viraDireita()
+avanca(iPassos : inteiro)
+retrocede(iPassos : inteiro)
+
+> LEDs
+acendeLedVerde()
+apagaLedVerde()
+acendeLedVermelho()
+apagaLedVermelho()
+acendeLedAmarelo()
+apagaLedAmarelo()
+piscaLedVerde(qtde : inteiro)
+piscaLedAmarelo(qtde : inteiro)
+piscaLedVermelho(qtde : inteiro)
+
+> Sensores
+medeDistancia() : inteiro -> Retorna a distancia em centimetros
+
+
+
+
+[Exemplos de código que podem ser produzidos]
+program {
+	avanca(2);
+	viraDireita();
+	avanca(3);
+	if(medeDistancia() < 3) {
+		avanca(2);
+	} else {
+		avanca(3);
+	}
+	acendeLedVerde();
+}
+
+program {
+	avanca(5);
+	avanca(5);
+	avanca(5);
+	avanca(5);
+	apagaLedVerde();
+}
+
+program {
+	if(medeDistancia() > 10) {
+		avanca(100);
+	}
+	for(i = 0; i < medeDistancia() / 10; i = i + 1) {
+		avanca(1);
+	}
+}
