@@ -4,7 +4,7 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>135</x>
+      <x>27</x>
       <y>165</y>
       <w>102</w>
       <h>33</h>
@@ -12,15 +12,15 @@
     <panel_attributes>bg=cyan
 0
 --
-S → * PGM
-PGM → * program { STMT_LIST }
+S → • PGM
+PGM → • program { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>174</x>
+      <x>66</x>
       <y>276</y>
       <w>9</w>
       <h>24</h>
@@ -32,15 +32,15 @@ PGM → * program { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>165</y>
       <w>54</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>*1*
+    <panel_attributes>•1•
 bg=green
 --
-S → PGM *
+S → PGM •
 
 </panel_attributes>
     <additional_attributes/>
@@ -48,7 +48,7 @@ S → PGM *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>234</x>
+      <x>126</x>
       <y>174</y>
       <w>54</w>
       <h>12</h>
@@ -60,14 +60,14 @@ PGM</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>132</x>
+      <x>24</x>
       <y>246</y>
       <w>99</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>2
 --
-PGM → program * { STMT_LIST }
+PGM → program • { STMT_LIST }
 
 
 </panel_attributes>
@@ -76,7 +76,7 @@ PGM → program * { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>177</x>
+      <x>69</x>
       <y>195</y>
       <w>27</w>
       <h>57</h>
@@ -88,7 +88,7 @@ program</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>111</x>
+      <x>3</x>
       <y>177</y>
       <w>30</w>
       <h>9</h>
@@ -99,7 +99,7 @@ program</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>129</x>
+      <x>21</x>
       <y>294</y>
       <w>156</w>
       <h>132</h>
@@ -107,20 +107,20 @@ program</panel_attributes>
     <panel_attributes>bg=cyan
 3
 --
-PGM → program { * STMT_LIST }
-+ STMT_LIST → * STMT STMT_LIST
-+ STMT_LIST → * STMT
-+ STMT → * CTRL_FLUXO
-+ STMT → * FUNCTION ;
-+ CTRL_FLUXO → * IF
-+ CTRL_FLUXO → * FOR
-+ CTRL_FLUXO → * WHILE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST } ELSE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST }
-+ FOR → * for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ WHILE → * while ( EXP_BOOL ) { STMT_LIST }
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+PGM → program { • STMT_LIST }
++ STMT_LIST → • STMT STMT_LIST
++ STMT_LIST → • STMT
++ STMT → • CTRL_FLUXO
++ STMT → • FUNCTION ;
++ CTRL_FLUXO → • IF
++ CTRL_FLUXO → • FOR
++ CTRL_FLUXO → • WHILE
++ IF → • if ( EXP_BOOL ) { STMT_LIST } ELSE
++ IF → • if ( EXP_BOOL ) { STMT_LIST }
++ FOR → • for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ WHILE → • while ( EXP_BOOL ) { STMT_LIST }
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 
 
 
@@ -132,14 +132,14 @@ PGM → program { * STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>126</x>
+      <x>18</x>
       <y>447</y>
       <w>99</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>4
 --
-PGM → program { STMT_LIST * }
+PGM → program { STMT_LIST • }
 
 
 </panel_attributes>
@@ -148,7 +148,7 @@ PGM → program { STMT_LIST * }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>174</x>
+      <x>66</x>
       <y>423</y>
       <w>30</w>
       <h>30</h>
@@ -160,7 +160,7 @@ STMT_LIST</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>126</x>
+      <x>18</x>
       <y>498</y>
       <w>99</w>
       <h>30</h>
@@ -168,7 +168,7 @@ STMT_LIST</panel_attributes>
     <panel_attributes>bg=light_gray
 5
 --
-PGM → program { STMT_LIST } *
+PGM → program { STMT_LIST } •
 
 
 </panel_attributes>
@@ -177,7 +177,7 @@ PGM → program { STMT_LIST } *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>174</x>
+      <x>66</x>
       <y>474</y>
       <w>9</w>
       <h>30</h>
@@ -189,7 +189,7 @@ PGM → program { STMT_LIST } *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>462</x>
+      <x>354</x>
       <y>267</y>
       <w>165</w>
       <h>96</h>
@@ -197,28 +197,28 @@ PGM → program { STMT_LIST } *
     <panel_attributes>bg=cyan
 6
 --
-STMT_LIST → STMT * STMT_LIST
-STMT_LIST → STMT *
-+ STMT_LIST → * STMT STMT_LIST
-+ STMT_LIST → * STMT
-+ STMT → * CTRL_FLUXO
-+ STMT → * FUNCTION ;
-+ CTRL_FLUXO → * IF
-+ CTRL_FLUXO → * FOR
-+ CTRL_FLUXO → * WHILE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST } ELSE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST }
-+ FOR → * for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ WHILE → * while ( EXP_BOOL ) { STMT_LIST }
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+STMT_LIST → STMT • STMT_LIST
+STMT_LIST → STMT •
++ STMT_LIST → • STMT STMT_LIST
++ STMT_LIST → • STMT
++ STMT → • CTRL_FLUXO
++ STMT → • FUNCTION ;
++ CTRL_FLUXO → • IF
++ CTRL_FLUXO → • FOR
++ CTRL_FLUXO → • WHILE
++ IF → • if ( EXP_BOOL ) { STMT_LIST } ELSE
++ IF → • if ( EXP_BOOL ) { STMT_LIST }
++ FOR → • for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ WHILE → • while ( EXP_BOOL ) { STMT_LIST }
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>342</y>
       <w>186</w>
       <h>12</h>
@@ -230,7 +230,7 @@ STMT</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>486</x>
+      <x>378</x>
       <y>213</y>
       <w>102</w>
       <h>30</h>
@@ -238,7 +238,7 @@ STMT</panel_attributes>
     <panel_attributes>bg=light_gray
 7
 --
-STMT_LIST → STMT STMT_LIST *
+STMT_LIST → STMT STMT_LIST •
 
 </panel_attributes>
     <additional_attributes/>
@@ -246,7 +246,7 @@ STMT_LIST → STMT STMT_LIST *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>531</x>
+      <x>423</x>
       <y>240</y>
       <w>30</w>
       <h>33</h>
@@ -258,7 +258,7 @@ STMT_LIST</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>444</x>
+      <x>336</x>
       <y>237</y>
       <w>39</w>
       <h>57</h>
@@ -270,7 +270,7 @@ STMT</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>315</x>
+      <x>207</x>
       <y>201</y>
       <w>96</w>
       <h>27</h>
@@ -278,14 +278,14 @@ STMT</panel_attributes>
     <panel_attributes>bg=light_gray
 8
 --
-STMT → CTRL_FLUXO *
+STMT → CTRL_FLUXO •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
+      <x>132</x>
       <y>213</y>
       <w>81</w>
       <h>87</h>
@@ -297,21 +297,21 @@ CTRL_FLUXO</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>321</x>
+      <x>213</x>
       <y>270</y>
       <w>78</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>9
 --
-STMT → FUNCTION * ;
+STMT → FUNCTION • ;
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>291</y>
       <w>75</w>
       <h>30</h>
@@ -323,7 +323,7 @@ FUNCTION</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>321</x>
+      <x>213</x>
       <y>237</y>
       <w>78</w>
       <h>21</h>
@@ -331,14 +331,14 @@ FUNCTION</panel_attributes>
     <panel_attributes>bg=light_gray
 10
 --
-STMT → FUNCTION ; *
+STMT → FUNCTION ; •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>357</x>
+      <x>249</x>
       <y>255</y>
       <w>9</w>
       <h>21</h>
@@ -350,7 +350,7 @@ STMT → FUNCTION ; *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>369</x>
+      <x>261</x>
       <y>360</y>
       <w>90</w>
       <h>33</h>
@@ -358,7 +358,7 @@ STMT → FUNCTION ; *
     <panel_attributes>11
 bg=light_gray
 --
-CTRL_FLUXO → IF *
+CTRL_FLUXO → IF •
 
 
 </panel_attributes>
@@ -367,7 +367,7 @@ CTRL_FLUXO → IF *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>366</y>
       <w>93</w>
       <h>12</h>
@@ -379,7 +379,7 @@ IF</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>372</x>
+      <x>264</x>
       <y>396</y>
       <w>90</w>
       <h>33</h>
@@ -387,7 +387,7 @@ IF</panel_attributes>
     <panel_attributes>bg=light_gray
 12
 --
-CTRL_FLUXO → FOR *
+CTRL_FLUXO → FOR •
 
 
 </panel_attributes>
@@ -396,7 +396,7 @@ CTRL_FLUXO → FOR *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>375</y>
       <w>96</w>
       <h>39</h>
@@ -408,7 +408,7 @@ FOR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>375</x>
+      <x>267</x>
       <y>435</y>
       <w>90</w>
       <h>33</h>
@@ -416,7 +416,7 @@ FOR</panel_attributes>
     <panel_attributes>bg=light_gray
 13
 --
-CTRL_FLUXO → WHILE *
+CTRL_FLUXO → WHILE •
 
 
 </panel_attributes>
@@ -425,7 +425,7 @@ CTRL_FLUXO → WHILE *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>384</y>
       <w>99</w>
       <h>69</h>
@@ -437,15 +437,15 @@ WHILE</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>360</x>
+      <x>252</x>
       <y>474</y>
       <w>141</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>14
 --
-IF → if * ( EXP_BOOL ) { STMT_LIST } ELSE
-IF → if * ( EXP_BOOL ) { STMT_LIST }
+IF → if • ( EXP_BOOL ) { STMT_LIST } ELSE
+IF → if • ( EXP_BOOL ) { STMT_LIST }
 
 </panel_attributes>
     <additional_attributes/>
@@ -453,7 +453,7 @@ IF → if * ( EXP_BOOL ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>393</y>
       <w>84</w>
       <h>102</h>
@@ -465,7 +465,7 @@ if</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
+      <x>348</x>
       <y>360</y>
       <w>30</w>
       <h>21</h>
@@ -477,7 +477,7 @@ IF</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>459</x>
+      <x>351</x>
       <y>360</y>
       <w>45</w>
       <h>60</h>
@@ -489,7 +489,7 @@ FOR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>462</x>
+      <x>354</x>
       <y>360</y>
       <w>60</w>
       <h>93</h>
@@ -501,7 +501,7 @@ WHILE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>360</y>
       <w>30</w>
       <h>132</h>
@@ -513,7 +513,7 @@ if</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
+      <x>300</x>
       <y>213</y>
       <w>60</w>
       <h>99</h>
@@ -525,7 +525,7 @@ CTRL_FLUXO</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>363</x>
+      <x>255</x>
       <y>291</y>
       <w>105</w>
       <h>30</h>
@@ -537,21 +537,21 @@ FUNCTION</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>351</x>
+      <x>243</x>
       <y>516</y>
       <w>159</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>15
 --
-FOR → for * ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for • ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>399</y>
       <w>75</w>
       <h>135</h>
@@ -563,7 +563,7 @@ for</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>507</x>
+      <x>399</x>
       <y>360</y>
       <w>36</w>
       <h>174</h>
@@ -575,14 +575,14 @@ for</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>360</x>
+      <x>252</x>
       <y>555</y>
       <w>141</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>16
 --
-WHILE → while * ( EXP_BOOL ) { STMT_LIST }
+WHILE → while • ( EXP_BOOL ) { STMT_LIST }
 
 </panel_attributes>
     <additional_attributes/>
@@ -590,7 +590,7 @@ WHILE → while * ( EXP_BOOL ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>405</y>
       <w>84</w>
       <h>171</h>
@@ -602,7 +602,7 @@ while</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>360</y>
       <w>57</w>
       <h>216</h>
@@ -614,22 +614,22 @@ while</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>360</x>
+      <x>252</x>
       <y>594</y>
       <w>141</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>17
 --
-FUNCTION → id * ( PARAMS )
-FUNCTION → id * ( )
+FUNCTION → id • ( PARAMS )
+FUNCTION → id • ( )
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>282</x>
+      <x>174</x>
       <y>411</y>
       <w>84</w>
       <h>204</h>
@@ -641,7 +641,7 @@ id</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>360</y>
       <w>60</w>
       <h>255</h>
@@ -653,7 +653,7 @@ id</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>360</x>
+      <x>252</x>
       <y>648</y>
       <w>141</w>
       <h>42</h>
@@ -661,17 +661,17 @@ id</panel_attributes>
     <panel_attributes>bg=cyan
 18
 --
-FUNCTION → id ( * PARAMS )
-FUNCTION → id ( * )
-+ PARAMS → * VAR
-+ VAR → * num
-+ VAR → * real</panel_attributes>
+FUNCTION → id ( • PARAMS )
+FUNCTION → id ( • )
++ PARAMS → • VAR
++ VAR → • num
++ VAR → • real</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>429</x>
+      <x>321</x>
       <y>624</y>
       <w>9</w>
       <h>30</h>
@@ -683,7 +683,7 @@ FUNCTION → id ( * )
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>363</x>
+      <x>255</x>
       <y>711</y>
       <w>141</w>
       <h>27</h>
@@ -691,14 +691,14 @@ FUNCTION → id ( * )
     <panel_attributes>19
 bg=light_gray
 --
-FUNCTION → id ( ) *
+FUNCTION → id ( ) •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>429</x>
+      <x>321</x>
       <y>687</y>
       <w>9</w>
       <h>30</h>
@@ -710,14 +710,14 @@ FUNCTION → id ( ) *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>228</x>
+      <x>120</x>
       <y>627</y>
       <w>87</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>20
 --
-FUNCTION → id ( PARAMS * )
+FUNCTION → id ( PARAMS • )
 
 </panel_attributes>
     <additional_attributes/>
@@ -725,7 +725,7 @@ FUNCTION → id ( PARAMS * )
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
+      <x>204</x>
       <y>639</y>
       <w>54</w>
       <h>33</h>
@@ -737,7 +737,7 @@ PARAMS</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>228</x>
+      <x>120</x>
       <y>684</y>
       <w>87</w>
       <h>33</h>
@@ -745,7 +745,7 @@ PARAMS</panel_attributes>
     <panel_attributes>21
 bg=light_gray
 --
-PARAMS → VAR *
+PARAMS → VAR •
 
 </panel_attributes>
     <additional_attributes/>
@@ -753,7 +753,7 @@ PARAMS → VAR *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
+      <x>204</x>
       <y>669</y>
       <w>54</w>
       <h>36</h>
@@ -765,7 +765,7 @@ VAR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>528</x>
+      <x>420</x>
       <y>699</y>
       <w>72</w>
       <h>27</h>
@@ -773,14 +773,14 @@ VAR</panel_attributes>
     <panel_attributes>23
 bg=light_gray
 --
-VAR → real *
+VAR → real •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>597</x>
+      <x>489</x>
       <y>648</y>
       <w>72</w>
       <h>27</h>
@@ -788,14 +788,14 @@ VAR → real *
     <panel_attributes>22
 bg=light_gray
 --
-VAR → num *
+VAR → num •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>669</y>
       <w>54</w>
       <h>36</h>
@@ -807,7 +807,7 @@ real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>657</y>
       <w>105</w>
       <h>12</h>
@@ -819,7 +819,7 @@ num</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>657</x>
+      <x>549</x>
       <y>342</y>
       <w>120</w>
       <h>84</h>
@@ -827,26 +827,26 @@ num</panel_attributes>
     <panel_attributes>bg=cyan
 24
 --
-IF → if ( * EXP_BOOL ) { STMT_LIST } ELSE
-IF → if ( * EXP_BOOL ) { STMT_LIST }
-+ EXP_BOOL → * EXP OP_REL EXP MORE_EXP_BOOL
-+ EXP_BOOL → * EXP OP_REL EXP
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
-+ VAR → * num
-+ VAR → * real</panel_attributes>
+IF → if ( • EXP_BOOL ) { STMT_LIST } ELSE
+IF → if ( • EXP_BOOL ) { STMT_LIST }
++ EXP_BOOL → • EXP OP_REL EXP MORE_EXP_BOOL
++ EXP_BOOL → • EXP OP_REL EXP
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
++ VAR → • num
++ VAR → • real</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>369</y>
       <w>165</w>
       <h>132</h>
@@ -858,21 +858,21 @@ IF → if ( * EXP_BOOL ) { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>612</x>
+      <x>504</x>
       <y>432</y>
       <w>156</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>25
 --
-FOR → for ( * i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( • i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>507</x>
+      <x>399</x>
       <y>447</y>
       <w>111</w>
       <h>93</h>
@@ -884,7 +884,7 @@ FOR → for ( * i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>615</x>
+      <x>507</x>
       <y>543</y>
       <w>141</w>
       <h>87</h>
@@ -892,25 +892,25 @@ FOR → for ( * i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
     <panel_attributes>bg=cyan
 26
 --
-WHILE → while ( * EXP_BOOL ) { STMT_LIST }
-+ EXP_BOOL → * EXP OP_REL EXP MORE_EXP_BOOL
-+ EXP_BOOL → * EXP OP_REL EXP
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )</panel_attributes>
+WHILE → while ( • EXP_BOOL ) { STMT_LIST }
++ EXP_BOOL → • EXP OP_REL EXP MORE_EXP_BOOL
++ EXP_BOOL → • EXP OP_REL EXP
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>570</y>
       <w>123</w>
       <h>12</h>
@@ -922,14 +922,14 @@ WHILE → while ( * EXP_BOOL ) { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>612</x>
+      <x>504</x>
       <y>483</y>
       <w>156</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>27
 --
-FOR → for ( i * = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i • = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
 
 </panel_attributes>
     <additional_attributes/>
@@ -937,7 +937,7 @@ FOR → for ( i * = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>687</x>
+      <x>579</x>
       <y>462</y>
       <w>9</w>
       <h>27</h>
@@ -949,7 +949,7 @@ i</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>798</x>
+      <x>690</x>
       <y>486</y>
       <w>165</w>
       <h>75</h>
@@ -957,24 +957,24 @@ i</panel_attributes>
     <panel_attributes>bg=cyan
 28
 --
-FOR → for ( i = * EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
-+ VAR → * num
-+ VAR → * real
+FOR → for ( i = • EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
++ VAR → • num
++ VAR → • real
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>657</x>
       <y>495</y>
       <w>39</w>
       <h>12</h>
@@ -986,7 +986,7 @@ FOR → for ( i = * EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>477</x>
       <y>387</y>
       <w>78</w>
       <h>282</h>
@@ -997,7 +997,7 @@ FOR → for ( i = * EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>462</x>
       <y>375</y>
       <w>93</w>
       <h>330</h>
@@ -1009,7 +1009,7 @@ real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>462</x>
       <y>591</y>
       <w>51</w>
       <h>12</h>
@@ -1020,7 +1020,7 @@ real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>477</x>
       <y>615</y>
       <w>36</w>
       <h>12</h>
@@ -1031,7 +1031,7 @@ real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>462</x>
       <y>516</y>
       <w>234</w>
       <h>12</h>
@@ -1042,7 +1042,7 @@ real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>477</x>
       <y>534</y>
       <w>219</w>
       <h>12</h>
@@ -1053,21 +1053,21 @@ real</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>657</x>
+      <x>549</x>
       <y>297</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>29
 --
-IF → if ( EXP_BOOL * ) { STMT_LIST } ELSE
-IF → if ( EXP_BOOL * ) { STMT_LIST }</panel_attributes>
+IF → if ( EXP_BOOL • ) { STMT_LIST } ELSE
+IF → if ( EXP_BOOL • ) { STMT_LIST }</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>711</x>
+      <x>603</x>
       <y>321</y>
       <w>30</w>
       <h>27</h>
@@ -1079,21 +1079,21 @@ EXP_BOOL</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>657</x>
+      <x>549</x>
       <y>246</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>30
 --
-IF → if ( EXP_BOOL ) * { STMT_LIST } ELSE
-IF → if ( EXP_BOOL ) * { STMT_LIST }</panel_attributes>
+IF → if ( EXP_BOOL ) • { STMT_LIST } ELSE
+IF → if ( EXP_BOOL ) • { STMT_LIST }</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>711</x>
+      <x>603</x>
       <y>270</y>
       <w>9</w>
       <h>33</h>
@@ -1105,7 +1105,7 @@ IF → if ( EXP_BOOL ) * { STMT_LIST }</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>639</x>
+      <x>531</x>
       <y>138</y>
       <w>165</w>
       <h>93</h>
@@ -1113,28 +1113,28 @@ IF → if ( EXP_BOOL ) * { STMT_LIST }</panel_attributes>
     <panel_attributes>bg=cyan
 31
 --
-IF → if ( EXP_BOOL ) { * STMT_LIST } ELSE
-IF → if ( EXP_BOOL ) { * STMT_LIST }
-+ STMT_LIST → * STMT STMT_LIST
-+ STMT_LIST → * STMT
-+ STMT → * CTRL_FLUXO
-+ STMT → * FUNCTION ;
-+ CTRL_FLUXO → * IF
-+ CTRL_FLUXO → * FOR
-+ CTRL_FLUXO → * WHILE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST } ELSE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST }
-+ FOR → * for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ WHILE → * while ( EXP_BOOL ) { STMT_LIST }
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+IF → if ( EXP_BOOL ) { • STMT_LIST } ELSE
+IF → if ( EXP_BOOL ) { • STMT_LIST }
++ STMT_LIST → • STMT STMT_LIST
++ STMT_LIST → • STMT
++ STMT → • CTRL_FLUXO
++ STMT → • FUNCTION ;
++ CTRL_FLUXO → • IF
++ CTRL_FLUXO → • FOR
++ CTRL_FLUXO → • WHILE
++ IF → • if ( EXP_BOOL ) { STMT_LIST } ELSE
++ IF → • if ( EXP_BOOL ) { STMT_LIST }
++ FOR → • for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ WHILE → • while ( EXP_BOOL ) { STMT_LIST }
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 group=18</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>711</x>
+      <x>603</x>
       <y>228</y>
       <w>9</w>
       <h>24</h>
@@ -1146,15 +1146,15 @@ group=18</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>486</x>
+      <x>378</x>
       <y>171</y>
       <w>102</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>32
 --
-IF → if ( EXP_BOOL ) { STMT_LIST * } ELSE
-IF → if ( EXP_BOOL ) { STMT_LIST * }
+IF → if ( EXP_BOOL ) { STMT_LIST • } ELSE
+IF → if ( EXP_BOOL ) { STMT_LIST • }
 
 </panel_attributes>
     <additional_attributes/>
@@ -1162,7 +1162,7 @@ IF → if ( EXP_BOOL ) { STMT_LIST * }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>477</x>
       <y>180</y>
       <w>60</w>
       <h>12</h>
@@ -1174,7 +1174,7 @@ STMT_LIST</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>486</x>
+      <x>378</x>
       <y>120</y>
       <w>102</w>
       <h>30</h>
@@ -1182,16 +1182,16 @@ STMT_LIST</panel_attributes>
     <panel_attributes>bg=cyan
 33
 --
-IF → if ( EXP_BOOL ) { STMT_LIST } * ELSE
-IF → if ( EXP_BOOL ) { STMT_LIST } *
-+ ELSE → * else { STMT_LIST }
+IF → if ( EXP_BOOL ) { STMT_LIST } • ELSE
+IF → if ( EXP_BOOL ) { STMT_LIST } •
++ ELSE → • else { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>534</x>
+      <x>426</x>
       <y>147</y>
       <w>9</w>
       <h>30</h>
@@ -1203,21 +1203,21 @@ IF → if ( EXP_BOOL ) { STMT_LIST } *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>486</x>
+      <x>378</x>
       <y>78</y>
       <w>102</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>34
 --
-ELSE → else * { STMT_LIST }
+ELSE → else • { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>534</x>
+      <x>426</x>
       <y>99</y>
       <w>18</w>
       <h>27</h>
@@ -1229,7 +1229,7 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>639</x>
+      <x>531</x>
       <y>36</y>
       <w>165</w>
       <h>93</h>
@@ -1237,20 +1237,20 @@ else</panel_attributes>
     <panel_attributes>bg=cyan
 35
 --
-ELSE → else { * STMT_LIST }
-+ STMT_LIST → * STMT STMT_LIST
-+ STMT_LIST → * STMT
-+ STMT → * CTRL_FLUXO
-+ STMT → * FUNCTION ;
-+ CTRL_FLUXO → * IF
-+ CTRL_FLUXO → * FOR
-+ CTRL_FLUXO → * WHILE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST } ELSE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST }
-+ FOR → * for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ WHILE → * while ( EXP_BOOL ) { STMT_LIST }
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+ELSE → else { • STMT_LIST }
++ STMT_LIST → • STMT STMT_LIST
++ STMT_LIST → • STMT
++ STMT → • CTRL_FLUXO
++ STMT → • FUNCTION ;
++ CTRL_FLUXO → • IF
++ CTRL_FLUXO → • FOR
++ CTRL_FLUXO → • WHILE
++ IF → • if ( EXP_BOOL ) { STMT_LIST } ELSE
++ IF → • if ( EXP_BOOL ) { STMT_LIST }
++ FOR → • for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ WHILE → • while ( EXP_BOOL ) { STMT_LIST }
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 
 group=19</panel_attributes>
     <additional_attributes/>
@@ -1258,7 +1258,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>477</x>
       <y>84</y>
       <w>60</w>
       <h>12</h>
@@ -1270,21 +1270,21 @@ group=19</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>486</x>
+      <x>378</x>
       <y>42</y>
       <w>102</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>36
 --
-ELSE → else { STMT_LIST * }
+ELSE → else { STMT_LIST • }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>477</x>
       <y>51</y>
       <w>60</w>
       <h>12</h>
@@ -1296,7 +1296,7 @@ STMT_LIST</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>486</x>
+      <x>378</x>
       <y>0</y>
       <w>102</w>
       <h>27</h>
@@ -1304,14 +1304,14 @@ STMT_LIST</panel_attributes>
     <panel_attributes>bg=light_gray
 37
 --
-ELSE → else { STMT_LIST } *
+ELSE → else { STMT_LIST } •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>534</x>
+      <x>426</x>
       <y>24</y>
       <w>9</w>
       <h>24</h>
@@ -1323,7 +1323,7 @@ ELSE → else { STMT_LIST } *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>45</y>
       <w>57</w>
       <h>15</h>
@@ -1337,7 +1337,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>54</y>
       <w>57</w>
       <h>15</h>
@@ -1351,7 +1351,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>36</y>
       <w>57</w>
       <h>15</h>
@@ -1365,7 +1365,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>63</y>
       <w>57</w>
       <h>15</h>
@@ -1379,7 +1379,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>72</y>
       <w>57</w>
       <h>15</h>
@@ -1393,7 +1393,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>81</y>
       <w>57</w>
       <h>15</h>
@@ -1407,7 +1407,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>90</y>
       <w>57</w>
       <h>15</h>
@@ -1421,7 +1421,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>99</y>
       <w>57</w>
       <h>15</h>
@@ -1435,7 +1435,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>108</y>
       <w>57</w>
       <h>15</h>
@@ -1449,7 +1449,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>117</y>
       <w>57</w>
       <h>15</h>
@@ -1463,7 +1463,7 @@ group=19</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>147</y>
       <w>57</w>
       <h>15</h>
@@ -1477,7 +1477,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>156</y>
       <w>57</w>
       <h>15</h>
@@ -1491,7 +1491,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>138</y>
       <w>57</w>
       <h>15</h>
@@ -1505,7 +1505,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>174</y>
       <w>57</w>
       <h>15</h>
@@ -1519,7 +1519,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>183</y>
       <w>57</w>
       <h>15</h>
@@ -1533,7 +1533,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>192</y>
       <w>57</w>
       <h>15</h>
@@ -1547,7 +1547,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>201</y>
       <w>57</w>
       <h>15</h>
@@ -1561,7 +1561,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>210</y>
       <w>57</w>
       <h>15</h>
@@ -1575,7 +1575,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>219</y>
       <w>57</w>
       <h>15</h>
@@ -1589,7 +1589,7 @@ group=18</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>165</y>
       <w>57</w>
       <h>15</h>
@@ -1603,7 +1603,7 @@ group=18</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>648</x>
+      <x>540</x>
       <y>684</y>
       <w>114</w>
       <h>60</h>
@@ -1611,21 +1611,21 @@ group=18</panel_attributes>
     <panel_attributes>bg=cyan
 38
 --
-EXP_BOOL → EXP * OP_REL EXP MORE_EXP_BOOL
-EXP_BOOL → EXP * OP_REL EXP
- + OP_REL → * &lt;
- + OP_REL → * &lt;=
- + OP_REL → * &gt;
- + OP_REL → * &gt;=
- + OP_REL → * ==
- + OP_REL → * !=
+EXP_BOOL → EXP • OP_REL EXP MORE_EXP_BOOL
+EXP_BOOL → EXP • OP_REL EXP
+ + OP_REL → • &lt;
+ + OP_REL → • &lt;=
+ + OP_REL → • &gt;
+ + OP_REL → • &gt;=
+ + OP_REL → • ==
+ + OP_REL → • !=
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>705</x>
+      <x>597</x>
       <y>627</y>
       <w>15</w>
       <h>63</h>
@@ -1637,7 +1637,7 @@ EXP</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>540</x>
+      <x>432</x>
       <y>747</y>
       <w>72</w>
       <h>27</h>
@@ -1645,14 +1645,14 @@ EXP</panel_attributes>
     <panel_attributes>bg=light_gray
 39
 --
-OP_REL → &lt; *
+OP_REL → &lt; •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>540</x>
+      <x>432</x>
       <y>780</y>
       <w>72</w>
       <h>27</h>
@@ -1660,14 +1660,14 @@ OP_REL → &lt; *
     <panel_attributes>bg=light_gray
 40
 --
-OP_REL → &lt;= *
+OP_REL → &lt;= •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>540</x>
+      <x>432</x>
       <y>813</y>
       <w>72</w>
       <h>27</h>
@@ -1675,14 +1675,14 @@ OP_REL → &lt;= *
     <panel_attributes>bg=light_gray
 41
 --
-OP_REL → &gt; *
+OP_REL → &gt; •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>540</x>
+      <x>432</x>
       <y>846</y>
       <w>72</w>
       <h>27</h>
@@ -1690,14 +1690,14 @@ OP_REL → &gt; *
     <panel_attributes>bg=light_gray
 42
 --
-OP_REL → &gt;= *
+OP_REL → &gt;= •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>540</x>
+      <x>432</x>
       <y>879</y>
       <w>72</w>
       <h>27</h>
@@ -1705,14 +1705,14 @@ OP_REL → &gt;= *
     <panel_attributes>bg=light_gray
 43
 --
-OP_REL → == *
+OP_REL → == •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>540</x>
+      <x>432</x>
       <y>912</y>
       <w>72</w>
       <h>27</h>
@@ -1720,14 +1720,14 @@ OP_REL → == *
     <panel_attributes>bg=light_gray
 44
 --
-OP_REL → != *
+OP_REL → != •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
+      <x>501</x>
       <y>741</y>
       <w>57</w>
       <h>21</h>
@@ -1739,7 +1739,7 @@ OP_REL → != *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
+      <x>501</x>
       <y>741</y>
       <w>66</w>
       <h>60</h>
@@ -1751,7 +1751,7 @@ OP_REL → != *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
+      <x>501</x>
       <y>741</y>
       <w>69</w>
       <h>93</h>
@@ -1763,7 +1763,7 @@ OP_REL → != *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
+      <x>501</x>
       <y>741</y>
       <w>78</w>
       <h>123</h>
@@ -1775,7 +1775,7 @@ OP_REL → != *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
+      <x>501</x>
       <y>741</y>
       <w>84</w>
       <h>159</h>
@@ -1787,7 +1787,7 @@ OP_REL → != *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
+      <x>501</x>
       <y>741</y>
       <w>87</w>
       <h>189</h>
@@ -1799,7 +1799,7 @@ OP_REL → != *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>696</x>
+      <x>588</x>
       <y>795</y>
       <w>114</w>
       <h>99</h>
@@ -1807,24 +1807,24 @@ OP_REL → != *
     <panel_attributes>bg=cyan
 45
 --
-EXP_BOOL → EXP OP_REL * EXP MORE_EXP_BOOL
-EXP_BOOL → EXP OP_REL * EXP
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )</panel_attributes>
+EXP_BOOL → EXP OP_REL • EXP MORE_EXP_BOOL
+EXP_BOOL → EXP OP_REL • EXP
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>714</x>
+      <x>606</x>
       <y>741</y>
       <w>24</w>
       <h>60</h>
@@ -1836,21 +1836,21 @@ OP_REL</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>798</x>
+      <x>690</x>
       <y>687</y>
       <w>108</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>46
 --
-WHILE → while ( EXP_BOOL * ) { STMT_LIST }
+WHILE → while ( EXP_BOOL • ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>732</x>
+      <x>624</x>
       <y>627</y>
       <w>81</w>
       <h>66</h>
@@ -1862,7 +1862,7 @@ EXP_BOOL</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>351</y>
       <w>39</w>
       <h>15</h>
@@ -1876,21 +1876,21 @@ group=22</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>807</x>
+      <x>699</x>
       <y>732</y>
       <w>126</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>47
 --
-WHILE → while ( EXP_BOOL ) * { STMT_LIST }
+WHILE → while ( EXP_BOOL ) • { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
+      <x>753</x>
       <y>711</y>
       <w>9</w>
       <h>27</h>
@@ -1902,7 +1902,7 @@ WHILE → while ( EXP_BOOL ) * { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>822</x>
+      <x>714</x>
       <y>777</y>
       <w>159</w>
       <h>93</h>
@@ -1910,26 +1910,26 @@ WHILE → while ( EXP_BOOL ) * { STMT_LIST }
     <panel_attributes>bg=cyan
 48
 --
-WHILE → while ( EXP_BOOL ) { * STMT_LIST }
-+ STMT_LIST → * STMT STMT_LIST
-+ STMT_LIST → * STMT
-+ STMT → * CTRL_FLUXO
-+ STMT → * FUNCTION ;
-+ CTRL_FLUXO → * IF
-+ CTRL_FLUXO → * FOR
-+ CTRL_FLUXO → * WHILE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST } ELSE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST }
-+ FOR → * for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ WHILE → * while ( EXP_BOOL ) { STMT_LIST }
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )</panel_attributes>
+WHILE → while ( EXP_BOOL ) { • STMT_LIST }
++ STMT_LIST → • STMT STMT_LIST
++ STMT_LIST → • STMT
++ STMT → • CTRL_FLUXO
++ STMT → • FUNCTION ;
++ CTRL_FLUXO → • IF
++ CTRL_FLUXO → • FOR
++ CTRL_FLUXO → • WHILE
++ IF → • if ( EXP_BOOL ) { STMT_LIST } ELSE
++ IF → • if ( EXP_BOOL ) { STMT_LIST }
++ FOR → • for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ WHILE → • while ( EXP_BOOL ) { STMT_LIST }
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
+      <x>762</x>
       <y>756</y>
       <w>9</w>
       <h>27</h>
@@ -1941,7 +1941,7 @@ WHILE → while ( EXP_BOOL ) { * STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>786</y>
       <w>57</w>
       <h>15</h>
@@ -1955,7 +1955,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>795</y>
       <w>57</w>
       <h>15</h>
@@ -1969,7 +1969,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>777</y>
       <w>57</w>
       <h>15</h>
@@ -1983,7 +1983,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>813</y>
       <w>57</w>
       <h>15</h>
@@ -1997,7 +1997,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>822</y>
       <w>57</w>
       <h>15</h>
@@ -2011,7 +2011,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>840</y>
       <w>57</w>
       <h>15</h>
@@ -2025,7 +2025,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>849</y>
       <w>57</w>
       <h>15</h>
@@ -2039,7 +2039,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>858</y>
       <w>57</w>
       <h>15</h>
@@ -2053,7 +2053,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>804</y>
       <w>57</w>
       <h>15</h>
@@ -2067,7 +2067,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>978</x>
+      <x>870</x>
       <y>831</y>
       <w>57</w>
       <h>15</h>
@@ -2081,7 +2081,7 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
+      <x>774</x>
       <y>867</y>
       <w>30</w>
       <h>27</h>
@@ -2093,21 +2093,21 @@ STMT_LIST</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>831</x>
+      <x>723</x>
       <y>888</y>
       <w>114</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>49
 --
-WHILE → while ( EXP_BOOL ) { STMT_LIST * }
+WHILE → while ( EXP_BOOL ) { STMT_LIST • }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>831</x>
+      <x>723</x>
       <y>930</y>
       <w>114</w>
       <h>27</h>
@@ -2115,14 +2115,14 @@ WHILE → while ( EXP_BOOL ) { STMT_LIST * }
     <panel_attributes>89
 bg=light_gray
 --
-WHILE → while ( EXP_BOOL ) { STMT_LIST } *
+WHILE → while ( EXP_BOOL ) { STMT_LIST } •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
+      <x>774</x>
       <y>912</y>
       <w>9</w>
       <h>24</h>
@@ -2134,7 +2134,7 @@ WHILE → while ( EXP_BOOL ) { STMT_LIST } *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>822</x>
+      <x>714</x>
       <y>966</y>
       <w>114</w>
       <h>39</h>
@@ -2142,17 +2142,17 @@ WHILE → while ( EXP_BOOL ) { STMT_LIST } *
     <panel_attributes>bg=cyan
 50
 --
-EXP_BOOL → EXP OP_REL EXP * MORE_EXP_BOOL
-EXP_BOOL → EXP OP_REL EXP *
- + MORE_EXP_BOOL → * OP_BOOL EXP_BOOL
- + OP_BOOL → * and
- + OP_BOOL → * or</panel_attributes>
+EXP_BOOL → EXP OP_REL EXP • MORE_EXP_BOOL
+EXP_BOOL → EXP OP_REL EXP •
+ + MORE_EXP_BOOL → • OP_BOOL EXP_BOOL
+ + OP_BOOL → • and
+ + OP_BOOL → • or</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>693</x>
       <y>891</y>
       <w>27</w>
       <h>93</h>
@@ -2164,7 +2164,7 @@ EXP</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>531</x>
+      <x>423</x>
       <y>945</y>
       <w>114</w>
       <h>54</h>
@@ -2172,18 +2172,18 @@ EXP</panel_attributes>
     <panel_attributes>bg=cyan
 51
 --
-EXP → TERM * MORE_TERM
-EXP → TERM *
-+ MORE_TERM → * OP_ARIT_LO TERM MORE_TERM
-+ MORE_TERM → * OP_ARIT_LO TERM
-+ OP_ARIT_LO → * +
-+ OP_ARIT_LO → * -</panel_attributes>
+EXP → TERM • MORE_TERM
+EXP → TERM •
++ MORE_TERM → • OP_ARIT_LO TERM MORE_TERM
++ MORE_TERM → • OP_ARIT_LO TERM
++ OP_ARIT_LO → • +
++ OP_ARIT_LO → • -</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>642</x>
+      <x>534</x>
       <y>891</y>
       <w>78</w>
       <h>72</h>
@@ -2195,7 +2195,7 @@ TERM</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>741</x>
+      <x>633</x>
       <y>765</y>
       <w>18</w>
       <h>36</h>
@@ -2209,7 +2209,7 @@ group=8</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>756</x>
+      <x>648</x>
       <y>765</y>
       <w>15</w>
       <h>36</h>
@@ -2223,7 +2223,7 @@ group=8</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>531</x>
+      <x>423</x>
       <y>1008</y>
       <w>132</w>
       <h>51</h>
@@ -2231,18 +2231,18 @@ group=8</panel_attributes>
     <panel_attributes>bg=cyan
 52
 --
-TERM → FACTOR * MORE_FACTOR
-TERM → FACTOR *
- + MORE_FACTOR → * OP_ARIT_HI FACTOR MORE_FACTOR
- + MORE_FACTOR → * OP_ARIT_HI FACTOR
- + OP_ARIT_HI → * *
- + OP_ARIT_HI → * /</panel_attributes>
+TERM → FACTOR • MORE_FACTOR
+TERM → FACTOR •
+ + MORE_FACTOR → • OP_ARIT_HI FACTOR MORE_FACTOR
+ + MORE_FACTOR → • OP_ARIT_HI FACTOR
+ + OP_ARIT_HI → • *
+ + OP_ARIT_HI → • /</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
+      <x>552</x>
       <y>891</y>
       <w>84</w>
       <h>135</h>
@@ -2254,7 +2254,7 @@ FACTOR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>1062</y>
       <w>114</w>
       <h>24</h>
@@ -2262,13 +2262,13 @@ FACTOR</panel_attributes>
     <panel_attributes>bg=light_gray
 53
 --
-FACTOR → VAR *</panel_attributes>
+FACTOR → VAR •</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>786</x>
+      <x>678</x>
       <y>891</y>
       <w>18</w>
       <h>177</h>
@@ -2280,7 +2280,7 @@ VAR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>753</x>
+      <x>645</x>
       <y>1101</y>
       <w>114</w>
       <h>24</h>
@@ -2288,13 +2288,13 @@ VAR</panel_attributes>
     <panel_attributes>bg=light_gray
 54
 --
-FACTOR → FUNCTION *</panel_attributes>
+FACTOR → FUNCTION •</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>759</x>
+      <x>651</x>
       <y>891</y>
       <w>30</w>
       <h>216</h>
@@ -2306,7 +2306,7 @@ FUNCTION</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>771</x>
+      <x>663</x>
       <y>765</y>
       <w>12</w>
       <h>36</h>
@@ -2320,7 +2320,7 @@ group=8</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>468</x>
+      <x>360</x>
       <y>879</y>
       <w>60</w>
       <h>24</h>
@@ -2328,14 +2328,14 @@ group=8</panel_attributes>
     <panel_attributes>bg=light_gray
 55
 --
-OP_ARIT_LO → + *
+OP_ARIT_LO → + •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>405</x>
+      <x>297</x>
       <y>879</y>
       <w>54</w>
       <h>24</h>
@@ -2343,14 +2343,14 @@ OP_ARIT_LO → + *
     <panel_attributes>bg=light_gray
 56
 --
-OP_ARIT_LO → - *
+OP_ARIT_LO → - •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
+      <x>390</x>
       <y>900</y>
       <w>39</w>
       <h>60</h>
@@ -2362,7 +2362,7 @@ OP_ARIT_LO → - *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>444</x>
+      <x>336</x>
       <y>900</y>
       <w>93</w>
       <h>66</h>
@@ -2374,7 +2374,7 @@ OP_ARIT_LO → - *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>342</x>
+      <x>234</x>
       <y>993</y>
       <w>132</w>
       <h>66</h>
@@ -2382,23 +2382,23 @@ OP_ARIT_LO → - *
     <panel_attributes>bg=cyan
 58
 --
-MORE_TERM → OP_ARIT_LO * TERM MORE_TERM
-MORE_TERM → OP_ARIT_LO * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+MORE_TERM → OP_ARIT_LO • TERM MORE_TERM
+MORE_TERM → OP_ARIT_LO • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>360</x>
+      <x>252</x>
       <y>909</y>
       <w>72</w>
       <h>24</h>
@@ -2406,14 +2406,14 @@ MORE_TERM → OP_ARIT_LO * TERM
     <panel_attributes>bg=light_gray
 57
 --
-EXP → TERM MORE_TERM *
+EXP → TERM MORE_TERM •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>405</x>
+      <x>297</x>
       <y>930</y>
       <w>132</w>
       <h>45</h>
@@ -2425,7 +2425,7 @@ MORE_TERM</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>441</x>
+      <x>333</x>
       <y>975</y>
       <w>96</w>
       <h>24</h>
@@ -2437,7 +2437,7 @@ OP_ARIT_LO</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>471</x>
+      <x>363</x>
       <y>1023</y>
       <w>36</w>
       <h>15</h>
@@ -2451,7 +2451,7 @@ group=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>471</x>
+      <x>363</x>
       <y>1032</y>
       <w>36</w>
       <h>15</h>
@@ -2465,7 +2465,7 @@ group=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>471</x>
+      <x>363</x>
       <y>1041</y>
       <w>36</w>
       <h>15</h>
@@ -2479,7 +2479,7 @@ group=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>471</x>
+      <x>363</x>
       <y>1017</y>
       <w>66</w>
       <h>12</h>
@@ -2491,7 +2491,7 @@ FACTOR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>471</x>
+      <x>363</x>
       <y>996</y>
       <w>36</w>
       <h>15</h>
@@ -2505,7 +2505,7 @@ group=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>471</x>
+      <x>363</x>
       <y>1008</y>
       <w>36</w>
       <h>15</h>
@@ -2519,7 +2519,7 @@ group=5</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>213</x>
+      <x>105</x>
       <y>912</y>
       <w>132</w>
       <h>54</h>
@@ -2527,18 +2527,18 @@ group=5</panel_attributes>
     <panel_attributes>bg=cyan
 59
 --
-MORE_TERM → OP_ARIT_LO TERM * MORE_TERM
-MORE_TERM → OP_ARIT_LO TERM *
-+ MORE_TERM → * OP_ARIT_LO TERM MORE_TERM
-+ MORE_TERM → * OP_ARIT_LO TERM
-+ OP_ARIT_LO → * +
-+ OP_ARIT_LO → * -</panel_attributes>
+MORE_TERM → OP_ARIT_LO TERM • MORE_TERM
+MORE_TERM → OP_ARIT_LO TERM •
++ MORE_TERM → • OP_ARIT_LO TERM MORE_TERM
++ MORE_TERM → • OP_ARIT_LO TERM
++ OP_ARIT_LO → • +
++ OP_ARIT_LO → • -</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>222</x>
       <y>888</y>
       <w>81</w>
       <h>30</h>
@@ -2550,7 +2550,7 @@ MORE_TERM → OP_ARIT_LO TERM *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>321</x>
+      <x>213</x>
       <y>861</y>
       <w>171</w>
       <h>57</h>
@@ -2562,7 +2562,7 @@ MORE_TERM → OP_ARIT_LO TERM *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>234</x>
       <y>951</y>
       <w>39</w>
       <h>48</h>
@@ -2574,7 +2574,7 @@ OP_ARIT_LO</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>204</x>
+      <x>96</x>
       <y>993</y>
       <w>132</w>
       <h>27</h>
@@ -2582,14 +2582,14 @@ OP_ARIT_LO</panel_attributes>
     <panel_attributes>bg=light_gray
 60
 --
-MORE_TERM → OP_ARIT_LO TERM MORE_TERM *
+MORE_TERM → OP_ARIT_LO TERM MORE_TERM •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>276</x>
+      <x>168</x>
       <y>963</y>
       <w>33</w>
       <h>36</h>
@@ -2601,7 +2601,7 @@ MORE_TERM</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>234</x>
       <y>939</y>
       <w>60</w>
       <h>60</h>
@@ -2613,7 +2613,7 @@ TERM</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>753</x>
+      <x>645</x>
       <y>558</y>
       <w>39</w>
       <h>15</h>
@@ -2627,7 +2627,7 @@ group=6</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>753</x>
+      <x>645</x>
       <y>570</y>
       <w>39</w>
       <h>15</h>
@@ -2641,7 +2641,7 @@ group=6</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>753</x>
+      <x>645</x>
       <y>582</y>
       <w>39</w>
       <h>15</h>
@@ -2655,7 +2655,7 @@ group=6</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>753</x>
+      <x>645</x>
       <y>594</y>
       <w>39</w>
       <h>15</h>
@@ -2669,7 +2669,7 @@ group=6</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
+      <x>438</x>
       <y>603</y>
       <w>75</w>
       <h>15</h>
@@ -2681,7 +2681,7 @@ group=6</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>666</x>
+      <x>558</x>
       <y>1119</y>
       <w>60</w>
       <h>21</h>
@@ -2689,14 +2689,14 @@ group=6</panel_attributes>
     <panel_attributes>bg=light_gray
 61
 --
-OP_ARIT_HI → * *
+OP_ARIT_HI → * •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>636</x>
+      <x>528</x>
       <y>1056</y>
       <w>36</w>
       <h>81</h>
@@ -2708,7 +2708,7 @@ OP_ARIT_HI → * *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>666</x>
+      <x>558</x>
       <y>1149</y>
       <w>60</w>
       <h>21</h>
@@ -2716,14 +2716,14 @@ OP_ARIT_HI → * *
     <panel_attributes>bg=light_gray
 62
 --
-OP_ARIT_HI → / *
+OP_ARIT_HI → / •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>621</x>
+      <x>513</x>
       <y>1056</y>
       <w>51</w>
       <h>108</h>
@@ -2735,7 +2735,7 @@ OP_ARIT_HI → / *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>669</x>
+      <x>561</x>
       <y>1077</y>
       <w>81</w>
       <h>24</h>
@@ -2743,14 +2743,14 @@ OP_ARIT_HI → / *
     <panel_attributes>bg=light_gray
 65
 --
-TERM → FACTOR MORE_FACTOR *
+TERM → FACTOR MORE_FACTOR •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
+      <x>540</x>
       <y>1056</y>
       <w>39</w>
       <h>39</h>
@@ -2762,7 +2762,7 @@ MORE_FACTOR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>339</x>
+      <x>231</x>
       <y>1071</y>
       <w>132</w>
       <h>66</h>
@@ -2770,14 +2770,14 @@ MORE_FACTOR</panel_attributes>
     <panel_attributes>bg=cyan
 63
 --
-MORE_FACTOR → OP_ARIT_HI * FACTOR MORE_FACTOR
-MORE_FACTOR → OP_ARIT_HI * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+MORE_FACTOR → OP_ARIT_HI • FACTOR MORE_FACTOR
+MORE_FACTOR → OP_ARIT_HI • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 
 </panel_attributes>
     <additional_attributes/>
@@ -2785,7 +2785,7 @@ MORE_FACTOR → OP_ARIT_HI * FACTOR
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
+      <x>360</x>
       <y>1056</y>
       <w>105</w>
       <h>30</h>
@@ -2797,7 +2797,7 @@ OP_ARIT_HI</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>468</x>
+      <x>360</x>
       <y>1143</y>
       <w>132</w>
       <h>48</h>
@@ -2805,18 +2805,18 @@ OP_ARIT_HI</panel_attributes>
     <panel_attributes>bg=cyan
 64
 --
-MORE_FACTOR → OP_ARIT_HI FACTOR * MORE_FACTOR
-MORE_FACTOR → OP_ARIT_HI FACTOR *
- + MORE_FACTOR → * OP_ARIT_HI FACTOR MORE_FACTOR
- + MORE_FACTOR → * OP_ARIT_HI FACTOR
- + OP_ARIT_HI → * *
- + OP_ARIT_HI → * /</panel_attributes>
+MORE_FACTOR → OP_ARIT_HI FACTOR • MORE_FACTOR
+MORE_FACTOR → OP_ARIT_HI FACTOR •
+ + MORE_FACTOR → • OP_ARIT_HI FACTOR MORE_FACTOR
+ + MORE_FACTOR → • OP_ARIT_HI FACTOR
+ + OP_ARIT_HI → • *
+ + OP_ARIT_HI → • /</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>597</x>
+      <x>489</x>
       <y>1152</y>
       <w>33</w>
       <h>12</h>
@@ -2827,7 +2827,7 @@ MORE_FACTOR → OP_ARIT_HI FACTOR *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>579</x>
+      <x>471</x>
       <y>1128</y>
       <w>66</w>
       <h>21</h>
@@ -2838,7 +2838,7 @@ MORE_FACTOR → OP_ARIT_HI FACTOR *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
+      <x>360</x>
       <y>1089</y>
       <w>87</w>
       <h>60</h>
@@ -2850,7 +2850,7 @@ OP_ARIT_HI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
+      <x>360</x>
       <y>1101</y>
       <w>39</w>
       <h>48</h>
@@ -2862,7 +2862,7 @@ FACTOR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>309</x>
+      <x>201</x>
       <y>1119</y>
       <w>36</w>
       <h>15</h>
@@ -2876,7 +2876,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>309</x>
+      <x>201</x>
       <y>1110</y>
       <w>36</w>
       <h>15</h>
@@ -2890,7 +2890,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>309</x>
+      <x>201</x>
       <y>1098</y>
       <w>36</w>
       <h>15</h>
@@ -2904,7 +2904,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>309</x>
+      <x>201</x>
       <y>1086</y>
       <w>36</w>
       <h>15</h>
@@ -2918,7 +2918,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>309</x>
+      <x>201</x>
       <y>1074</y>
       <w>36</w>
       <h>15</h>
@@ -2932,7 +2932,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>819</x>
+      <x>711</x>
       <y>1026</y>
       <w>60</w>
       <h>21</h>
@@ -2940,14 +2940,14 @@ group=4</panel_attributes>
     <panel_attributes>bg=light_gray
 66
 --
-OP_BOOL → and *
+OP_BOOL → and •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>849</x>
+      <x>741</x>
       <y>1002</y>
       <w>15</w>
       <h>30</h>
@@ -2959,7 +2959,7 @@ and</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>882</x>
+      <x>774</x>
       <y>1026</y>
       <w>60</w>
       <h>21</h>
@@ -2967,14 +2967,14 @@ and</panel_attributes>
     <panel_attributes>bg=light_gray
 67
 --
-OP_BOOL → or *
+OP_BOOL → or •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>906</x>
+      <x>798</x>
       <y>1002</y>
       <w>12</w>
       <h>30</h>
@@ -2986,7 +2986,7 @@ or</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>951</x>
+      <x>843</x>
       <y>936</y>
       <w>114</w>
       <h>24</h>
@@ -2994,14 +2994,14 @@ or</panel_attributes>
     <panel_attributes>bg=light_gray
 68
 --
-EXP_BOOL → EXP OP_REL EXP MORE_EXP_BOOL *
+EXP_BOOL → EXP OP_REL EXP MORE_EXP_BOOL •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>933</x>
+      <x>825</x>
       <y>957</y>
       <w>63</w>
       <h>30</h>
@@ -3013,7 +3013,7 @@ MORE_EXP_BOOL</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
+      <x>840</x>
       <y>1014</y>
       <w>114</w>
       <h>84</h>
@@ -3021,25 +3021,25 @@ MORE_EXP_BOOL</panel_attributes>
     <panel_attributes>bg=cyan
 69
 --
-MORE_EXP_BOOL → OP_BOOL * EXP_BOOL
-+ EXP_BOOL → * EXP OP_REL EXP MORE_EXP_BOOL
-+ EXP_BOOL → * EXP OP_REL EXP
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )</panel_attributes>
+MORE_EXP_BOOL → OP_BOOL • EXP_BOOL
++ EXP_BOOL → • EXP OP_REL EXP MORE_EXP_BOOL
++ EXP_BOOL → • EXP OP_REL EXP
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>933</x>
+      <x>825</x>
       <y>984</y>
       <w>63</w>
       <h>36</h>
@@ -3051,7 +3051,7 @@ OP_BOOL</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
+      <x>756</x>
       <y>1083</y>
       <w>90</w>
       <h>36</h>
@@ -3064,7 +3064,7 @@ m2=54</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>885</x>
+      <x>777</x>
       <y>1065</y>
       <w>69</w>
       <h>15</h>
@@ -3077,7 +3077,7 @@ m2=53</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>1035</y>
       <w>39</w>
       <h>15</h>
@@ -3091,7 +3091,7 @@ group=24</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>1050</y>
       <w>39</w>
       <h>15</h>
@@ -3105,7 +3105,7 @@ group=24</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>1023</y>
       <w>39</w>
       <h>15</h>
@@ -3119,7 +3119,7 @@ group=24</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
+      <x>840</x>
       <y>1116</y>
       <w>114</w>
       <h>24</h>
@@ -3127,13 +3127,13 @@ group=24</panel_attributes>
     <panel_attributes>bg=light_gray
 70
 --
-MORE_EXP_BOOL → OP_BOOL EXP_BOOL *</panel_attributes>
+MORE_EXP_BOOL → OP_BOOL EXP_BOOL •</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1002</x>
+      <x>894</x>
       <y>1095</y>
       <w>30</w>
       <h>27</h>
@@ -3145,7 +3145,7 @@ EXP_BOOL</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
+      <x>852</x>
       <y>495</y>
       <w>39</w>
       <h>15</h>
@@ -3159,7 +3159,7 @@ group=23</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
+      <x>852</x>
       <y>507</y>
       <w>39</w>
       <h>15</h>
@@ -3173,7 +3173,7 @@ group=23</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
+      <x>852</x>
       <y>516</y>
       <w>39</w>
       <h>15</h>
@@ -3187,7 +3187,7 @@ group=23</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
+      <x>852</x>
       <y>528</y>
       <w>39</w>
       <h>15</h>
@@ -3201,7 +3201,7 @@ group=23</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
+      <x>852</x>
       <y>537</y>
       <w>39</w>
       <h>15</h>
@@ -3215,14 +3215,14 @@ group=23</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>804</x>
+      <x>696</x>
       <y>573</y>
       <w>156</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>71
 --
-FOR → for ( i = EXP * ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i = EXP • ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
 
 </panel_attributes>
     <additional_attributes/>
@@ -3230,7 +3230,7 @@ FOR → for ( i = EXP * ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
+      <x>768</x>
       <y>558</y>
       <w>15</w>
       <h>21</h>
@@ -3242,14 +3242,14 @@ EXP</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>816</x>
+      <x>708</x>
       <y>642</y>
       <w>156</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>72
 --
-FOR → for ( i = EXP ; * i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i = EXP ; • i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
 
 </panel_attributes>
     <additional_attributes/>
@@ -3257,7 +3257,7 @@ FOR → for ( i = EXP ; * i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>879</x>
+      <x>771</x>
       <y>603</y>
       <w>9</w>
       <h>45</h>
@@ -3269,7 +3269,7 @@ FOR → for ( i = EXP ; * i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1002</x>
+      <x>894</x>
       <y>633</y>
       <w>156</w>
       <h>60</h>
@@ -3277,20 +3277,20 @@ FOR → for ( i = EXP ; * i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
     <panel_attributes>bg=cyan
 73
 --
-FOR → for ( i = EXP ; i * OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
- + OP_REL → * &lt;
- + OP_REL → * &lt;=
- + OP_REL → * &gt;
- + OP_REL → * &gt;=
- + OP_REL → * ==
- + OP_REL → * !=
+FOR → for ( i = EXP ; i • OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
+ + OP_REL → • &lt;
+ + OP_REL → • &lt;=
+ + OP_REL → • &gt;
+ + OP_REL → • &gt;=
+ + OP_REL → • ==
+ + OP_REL → • !=
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>969</x>
+      <x>861</x>
       <y>651</y>
       <w>39</w>
       <h>12</h>
@@ -3302,7 +3302,7 @@ i</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1017</x>
+      <x>909</x>
       <y>690</y>
       <w>12</w>
       <h>36</h>
@@ -3316,7 +3316,7 @@ group=10</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1029</x>
+      <x>921</x>
       <y>690</y>
       <w>15</w>
       <h>36</h>
@@ -3330,7 +3330,7 @@ group=10</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1041</x>
+      <x>933</x>
       <y>690</y>
       <w>12</w>
       <h>36</h>
@@ -3344,7 +3344,7 @@ group=10</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1050</x>
+      <x>942</x>
       <y>690</y>
       <w>15</w>
       <h>36</h>
@@ -3358,7 +3358,7 @@ group=10</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
+      <x>954</x>
       <y>690</y>
       <w>15</w>
       <h>36</h>
@@ -3372,7 +3372,7 @@ group=10</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1074</x>
+      <x>966</x>
       <y>690</y>
       <w>12</w>
       <h>36</h>
@@ -3386,7 +3386,7 @@ group=10</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>747</y>
       <w>156</w>
       <h>78</h>
@@ -3394,17 +3394,17 @@ group=10</panel_attributes>
     <panel_attributes>bg=cyan
 74
 --
-FOR → for ( i = EXP ; i OP_REL * EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+FOR → for ( i = EXP ; i OP_REL • EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 
 group=16</panel_attributes>
     <additional_attributes/>
@@ -3412,7 +3412,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1116</x>
+      <x>1008</x>
       <y>690</y>
       <w>24</w>
       <h>63</h>
@@ -3424,7 +3424,7 @@ OP_REL</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>750</y>
       <w>39</w>
       <h>15</h>
@@ -3438,7 +3438,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>762</y>
       <w>39</w>
       <h>15</h>
@@ -3452,7 +3452,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>771</y>
       <w>39</w>
       <h>15</h>
@@ -3466,7 +3466,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>783</y>
       <w>39</w>
       <h>15</h>
@@ -3480,7 +3480,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>792</y>
       <w>39</w>
       <h>15</h>
@@ -3494,7 +3494,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>801</y>
       <w>39</w>
       <h>15</h>
@@ -3508,7 +3508,7 @@ group=16</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
+      <x>1104</x>
       <y>810</y>
       <w>39</w>
       <h>15</h>
@@ -3522,21 +3522,21 @@ group=16</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>846</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>75
 --
-FOR → for ( i = EXP ; i OP_REL EXP * ; i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i = EXP ; i OP_REL EXP • ; i = i OP_ARIT EXP ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1131</x>
+      <x>1023</x>
       <y>822</y>
       <w>15</w>
       <h>30</h>
@@ -3548,21 +3548,21 @@ EXP</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>894</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>76
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; * i = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i = EXP ; i OP_REL EXP ; • i = i OP_ARIT EXP ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1131</x>
+      <x>1023</x>
       <y>870</y>
       <w>9</w>
       <h>30</h>
@@ -3574,21 +3574,21 @@ FOR → for ( i = EXP ; i OP_REL EXP ; * i = i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1071</x>
+      <x>963</x>
       <y>942</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>77
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i * = i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i = EXP ; i OP_REL EXP ; i • = i OP_ARIT EXP ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1137</x>
+      <x>1029</x>
       <y>918</y>
       <w>9</w>
       <h>30</h>
@@ -3600,21 +3600,21 @@ i</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1071</x>
+      <x>963</x>
       <y>987</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>78
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = * i OP_ARIT EXP ) { STMT_LIST }
+FOR → for ( i = EXP ; i OP_REL EXP ; i = • i OP_ARIT EXP ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1143</x>
+      <x>1035</x>
       <y>966</y>
       <w>12</w>
       <h>27</h>
@@ -3626,7 +3626,7 @@ FOR → for ( i = EXP ; i OP_REL EXP ; i = * i OP_ARIT EXP ) { STMT_LIST }
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1110</x>
+      <x>1002</x>
       <y>1032</y>
       <w>156</w>
       <h>54</h>
@@ -3634,20 +3634,19 @@ FOR → for ( i = EXP ; i OP_REL EXP ; i = * i OP_ARIT EXP ) { STMT_LIST }
     <panel_attributes>bg=cyan
 79
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i * OP_ARIT EXP ) { STMT_LIST }
- + OP_ARIT → * OP_ARIT_LO
- + OP_ARIT → * OP_ARIT_HI
- + OP_ARIT_LO → * -
- + OP_ARIT_LO → * +
- + OP_ARIT_HI → * /
- + OP_ARIT_HI → * *
-group=17</panel_attributes>
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i • OP_ARIT EXP ) { STMT_LIST }
+ + OP_ARIT → • OP_ARIT_LO
+ + OP_ARIT → • OP_ARIT_HI
+ + OP_ARIT_LO → • -
+ + OP_ARIT_LO → • +
+ + OP_ARIT_HI → • /
+ + OP_ARIT_HI → • *</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1161</x>
+      <x>1053</x>
       <y>1011</y>
       <w>9</w>
       <h>27</h>
@@ -3659,63 +3658,63 @@ i</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1263</x>
-      <y>1056</y>
+      <x>1155</x>
+      <y>1053</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 -
 m2=56
-group=17</panel_attributes>
+group=25</panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1263</x>
-      <y>1047</y>
+      <x>1155</x>
+      <y>1044</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 +
 m2=55
-group=17</panel_attributes>
+group=25</panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1263</x>
-      <y>1065</y>
+      <x>1155</x>
+      <y>1062</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 *
 m2=61
-group=17</panel_attributes>
+group=25</panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1263</x>
-      <y>1074</y>
+      <x>1155</x>
+      <y>1071</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 /
 m2=62
-group=17</panel_attributes>
+group=25</panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1146</x>
+      <x>1038</x>
       <y>1083</y>
       <w>33</w>
       <h>27</h>
@@ -3727,7 +3726,7 @@ OP_ARIT_LO</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1110</x>
+      <x>1002</x>
       <y>1104</y>
       <w>69</w>
       <h>24</h>
@@ -3735,13 +3734,13 @@ OP_ARIT_LO</panel_attributes>
     <panel_attributes>bg=light_gray
 80
 --
-OP_ARIT → OP_ARIT_LO *</panel_attributes>
+OP_ARIT → OP_ARIT_LO •</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1197</x>
+      <x>1089</x>
       <y>1104</y>
       <w>69</w>
       <h>24</h>
@@ -3749,13 +3748,13 @@ OP_ARIT → OP_ARIT_LO *</panel_attributes>
     <panel_attributes>bg=light_gray
 81
 --
-OP_ARIT → OP_ARIT_HI *</panel_attributes>
+OP_ARIT → OP_ARIT_HI •</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1227</x>
+      <x>1119</x>
       <y>1083</y>
       <w>33</w>
       <h>27</h>
@@ -3767,25 +3766,25 @@ OP_ARIT_HI</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1248</x>
-      <y>936</y>
+      <x>1005</x>
+      <y>1173</y>
       <w>156</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>bg=cyan
 82
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT * EXP ) { STMT_LIST }
-+ EXP → * TERM MORE_TERM
-+ EXP → * TERM
-+ TERM → * FACTOR MORE_FACTOR
-+ TERM → * FACTOR
-+ FACTOR → * VAR
-+ FACTOR → * FUNCTION
-+ VAR → * num
-+ VAR → * real
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT • EXP ) { STMT_LIST }
++ EXP → • TERM MORE_TERM
++ EXP → • TERM
++ TERM → • FACTOR MORE_FACTOR
++ TERM → • FACTOR
++ FACTOR → • VAR
++ FACTOR → • FUNCTION
++ VAR → • num
++ VAR → • real
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 
 group=15</panel_attributes>
     <additional_attributes/>
@@ -3793,20 +3792,20 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1263</x>
-      <y>1011</y>
-      <w>30</w>
-      <h>36</h>
+      <x>1077</x>
+      <y>1083</y>
+      <w>27</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 OP_ARIT</panel_attributes>
-    <additional_attributes>10.0;100.0;80.0;100.0;80.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>939</y>
+      <x>1158</x>
+      <y>1176</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3819,8 +3818,8 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>951</y>
+      <x>1158</x>
+      <y>1188</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3833,8 +3832,8 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>960</y>
+      <x>1158</x>
+      <y>1197</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3847,8 +3846,8 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>972</y>
+      <x>1158</x>
+      <y>1209</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3861,8 +3860,8 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>981</y>
+      <x>1158</x>
+      <y>1218</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3875,8 +3874,8 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>990</y>
+      <x>1158</x>
+      <y>1227</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3889,8 +3888,8 @@ group=15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1401</x>
-      <y>999</y>
+      <x>1158</x>
+      <y>1236</y>
       <w>39</w>
       <h>15</h>
     </coordinates>
@@ -3903,100 +3902,100 @@ group=15</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1248</x>
-      <y>894</y>
+      <x>777</x>
+      <y>1179</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>83
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP * ) { STMT_LIST }
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP • ) { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1323</x>
-      <y>918</y>
-      <w>15</w>
-      <h>24</h>
+      <x>930</x>
+      <y>1188</y>
+      <w>81</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EXP</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1248</x>
-      <y>852</y>
+      <x>777</x>
+      <y>1236</y>
       <w>156</w>
-      <h>27</h>
+      <h>39</h>
     </coordinates>
     <panel_attributes>84
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) * { STMT_LIST }
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) • { STMT_LIST }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1323</x>
-      <y>876</y>
+      <x>849</x>
+      <y>1203</y>
       <w>9</w>
-      <h>24</h>
+      <h>39</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 )</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1263</x>
-      <y>744</y>
+      <x>534</x>
+      <y>1206</y>
       <w>159</w>
       <h>93</h>
     </coordinates>
     <panel_attributes>bg=cyan
 85
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { * STMT_LIST }
-+ STMT_LIST → * STMT STMT_LIST
-+ STMT_LIST → * STMT
-+ STMT → * CTRL_FLUXO
-+ STMT → * FUNCTION ;
-+ CTRL_FLUXO → * IF
-+ CTRL_FLUXO → * FOR
-+ CTRL_FLUXO → * WHILE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST } ELSE
-+ IF → * if ( EXP_BOOL ) { STMT_LIST }
-+ FOR → * for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
-+ WHILE → * while ( EXP_BOOL ) { STMT_LIST }
-+ FUNCTION → * id ( PARAMS )
-+ FUNCTION → * id ( )
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { • STMT_LIST }
++ STMT_LIST → • STMT STMT_LIST
++ STMT_LIST → • STMT
++ STMT → • CTRL_FLUXO
++ STMT → • FUNCTION ;
++ CTRL_FLUXO → • IF
++ CTRL_FLUXO → • FOR
++ CTRL_FLUXO → • WHILE
++ IF → • if ( EXP_BOOL ) { STMT_LIST } ELSE
++ IF → • if ( EXP_BOOL ) { STMT_LIST }
++ FOR → • for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST }
++ WHILE → • while ( EXP_BOOL ) { STMT_LIST }
++ FUNCTION → • id ( PARAMS )
++ FUNCTION → • id ( )
 group=21</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1332</x>
-      <y>834</y>
-      <w>9</w>
-      <h>24</h>
+      <x>609</x>
+      <y>1272</y>
+      <w>252</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 {</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>820.0;10.0;820.0;160.0;10.0;160.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>753</y>
+      <x>690</x>
+      <y>1215</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4009,8 +4008,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>744</y>
+      <x>690</x>
+      <y>1206</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4023,8 +4022,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>780</y>
+      <x>690</x>
+      <y>1242</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4037,8 +4036,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>789</y>
+      <x>690</x>
+      <y>1251</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4051,8 +4050,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>798</y>
+      <x>690</x>
+      <y>1260</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4065,8 +4064,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>807</y>
+      <x>690</x>
+      <y>1269</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4079,8 +4078,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>816</y>
+      <x>690</x>
+      <y>1278</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4093,8 +4092,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>825</y>
+      <x>690</x>
+      <y>1287</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4107,8 +4106,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>771</y>
+      <x>690</x>
+      <y>1233</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4121,8 +4120,8 @@ group=21</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1419</x>
-      <y>762</y>
+      <x>690</x>
+      <y>1224</y>
       <w>57</w>
       <h>15</h>
     </coordinates>
@@ -4135,60 +4134,60 @@ group=21</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1263</x>
-      <y>702</y>
+      <x>324</x>
+      <y>1314</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>86
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST * }
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST • }
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1338</x>
-      <y>726</y>
-      <w>30</w>
-      <h>24</h>
+      <x>477</x>
+      <y>1227</y>
+      <w>63</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 STMT_LIST</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>190.0;10.0;100.0;10.0;100.0;340.0;10.0;340.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1263</x>
-      <y>660</y>
+      <x>324</x>
+      <y>1263</y>
       <w>156</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>bg=light_gray
 87
 --
-FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST } *
+FOR → for ( i = EXP ; i OP_REL EXP ; i = i OP_ARIT EXP ) { STMT_LIST } •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1338</x>
-      <y>684</y>
+      <x>396</x>
+      <y>1287</y>
       <w>9</w>
-      <h>24</h>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 }</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>372</y>
       <w>39</w>
       <h>15</h>
@@ -4202,7 +4201,7 @@ group=22</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>381</y>
       <w>39</w>
       <h>15</h>
@@ -4216,7 +4215,7 @@ group=22</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>393</y>
       <w>39</w>
       <h>15</h>
@@ -4230,7 +4229,7 @@ group=22</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>402</y>
       <w>39</w>
       <h>15</h>
@@ -4244,7 +4243,7 @@ group=22</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
+      <x>666</x>
       <y>360</y>
       <w>39</w>
       <h>15</h>
@@ -4258,7 +4257,7 @@ group=22</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>114</x>
+      <x>6</x>
       <y>627</y>
       <w>87</w>
       <h>33</h>
@@ -4266,7 +4265,7 @@ group=22</panel_attributes>
     <panel_attributes>88
 bg=light_gray
 --
-FUNCTION → id ( PARAMS ) *
+FUNCTION → id ( PARAMS ) •
 
 </panel_attributes>
     <additional_attributes/>
@@ -4274,7 +4273,7 @@ FUNCTION → id ( PARAMS ) *
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>198</x>
+      <x>90</x>
       <y>636</y>
       <w>36</w>
       <h>12</h>
@@ -4286,7 +4285,7 @@ FUNCTION → id ( PARAMS ) *
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>468</x>
+      <x>360</x>
       <y>1218</y>
       <w>132</w>
       <h>27</h>
@@ -4294,13 +4293,13 @@ FUNCTION → id ( PARAMS ) *
     <panel_attributes>bg=light_gray
 90
 --
-MORE_FACTOR → OP_ARIT_HI FACTOR MORE_FACTOR *</panel_attributes>
+MORE_FACTOR → OP_ARIT_HI FACTOR MORE_FACTOR •</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>531</x>
+      <x>423</x>
       <y>1188</y>
       <w>39</w>
       <h>36</h>
@@ -4312,7 +4311,7 @@ MORE_FACTOR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>1062</y>
       <w>39</w>
       <h>15</h>
@@ -4326,7 +4325,7 @@ group=24</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>1071</y>
       <w>39</w>
       <h>15</h>
@@ -4340,7 +4339,7 @@ group=24</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1059</x>
+      <x>951</x>
       <y>1080</y>
       <w>39</w>
       <h>15</h>
@@ -4354,7 +4353,7 @@ group=24</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>381</x>
+      <x>273</x>
       <y>78</y>
       <w>96</w>
       <h>24</h>
@@ -4362,14 +4361,14 @@ group=24</panel_attributes>
     <panel_attributes>bg=light_gray
 91
 --
-IF → if ( EXP_BOOL ) { STMT_LIST } ELSE *
+IF → if ( EXP_BOOL ) { STMT_LIST } ELSE •
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>426</x>
+      <x>318</x>
       <y>99</y>
       <w>66</w>
       <h>42</h>
