@@ -144,4 +144,11 @@ public class SyntaticAnalyzerTest {
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
+
+	@Test
+	public void Parse_GeneratedCode_Parsed() throws Exception {
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medirDistancia()<=20){acendeLedVermelho();viraDireita();apagaLedVermelho();}acendeLedVerde();for(i=1;i<=10;i=i+1){avancar(1);}apagaLedVerde();}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+	}
 }

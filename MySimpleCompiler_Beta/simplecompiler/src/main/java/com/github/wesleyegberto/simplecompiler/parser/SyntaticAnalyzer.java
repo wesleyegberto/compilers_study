@@ -128,6 +128,7 @@ public class SyntaticAnalyzer {
      */
     public boolean parse() {
         Deque<Integer> stateStack = new LinkedList<>();
+		Deque<Token> tokensStack = new LinkedList<>();
         stateStack.push(0);
         int state = 0;
         Token token = null;
@@ -145,18 +146,27 @@ public class SyntaticAnalyzer {
                     return true;
                 case SHIFT:
                     // empilha o estado
-                    stateStack.push(stateToAct);
+					System.out.println("Shift: " + stateToAct);
+					stateStack.push(stateToAct);
+					tokensStack.push(token);
                     eat();
                     break;
                 case REDUCE:
                     // Retira da pilha a qtde de elementos da regra reduzida
                     int[] production = PRODUCTIONS[stateToAct];
                     int nElemToPop = production[1];
-                    for(int i = 0; i < nElemToPop; i++)
-                        stateStack.pop();
-                    // Muda para o estado do GoTo
+					// Tokens para a árvore gramatical
+					Token[] tokensOfRule = new Token[nElemToPop];
+					System.out.print("Reduce rule " + stateToAct + ": ");
+					for(int i = 0; i < nElemToPop; i++) {
+						System.out.print(stateStack.pop() + " ");
+						tokensOfRule[i] = tokensStack.pop();
+					}
+					System.out.println();
+					// Muda para o estado do GoTo
                     int oldState = stateStack.peek();
                     stateStack.push(TRANSITION_TABLE[oldState][production[0]][1]);
+					System.out.println("GoTo: " + TRANSITION_TABLE[oldState][production[0]][1]);
                     break;
                 case ERROR:
                     throw new ParserException("Token invalido: " + token.getLexeme());
