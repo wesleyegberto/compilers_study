@@ -1,5 +1,6 @@
 package com.github.wesleyegberto.simplecompiler.parser;
 
+import com.github.wesleyegberto.simplecompiler.grammar.TreeGrammarFactory;
 import com.github.wesleyegberto.simplecompiler.lexer.LexerAnalyzer;
 import com.github.wesleyegberto.simplecompiler.lexer.Token;
 import com.github.wesleyegberto.simplecompiler.lexer.TokenType;
@@ -128,9 +129,10 @@ public class SyntaticAnalyzer {
      */
     public boolean parse() {
         Deque<Integer> stateStack = new LinkedList<>();
-		Deque<Token> tokensStack = new LinkedList<>();
+		Deque<Object> rulesStack = new LinkedList<>();
         stateStack.push(0);
         int state = 0;
+		Object nodeAst = null;
         Token token = null;
 
         while((token = nextToken()) != null) {
@@ -143,12 +145,13 @@ public class SyntaticAnalyzer {
 
             switch (action) {
                 case SUCCESS:
-                    return true;
+					System.out.println("Last elem: " + rulesStack.pop());
+					return true;
                 case SHIFT:
                     // empilha o estado
 					System.out.println("Shift: " + stateToAct);
 					stateStack.push(stateToAct);
-					tokensStack.push(token);
+					rulesStack.push(token);
                     eat();
                     break;
                 case REDUCE:
@@ -156,16 +159,23 @@ public class SyntaticAnalyzer {
                     int[] production = PRODUCTIONS[stateToAct];
                     int nElemToPop = production[1];
 					// Tokens para a árvore gramatical
-					Token[] tokensOfRule = new Token[nElemToPop];
+					Object[] elementsOfRule = new Object[nElemToPop];
+
 					System.out.print("Reduce rule " + stateToAct + ": ");
-					for(int i = 0; i < nElemToPop; i++) {
+					for(int i = 0, j = nElemToPop - 1; i < nElemToPop; i++, j--) {
 						System.out.print(stateStack.pop() + " ");
-						tokensOfRule[i] = tokensStack.pop();
+						// A ordem dos elementos da regra está invertida (pilha)
+						elementsOfRule[j] = rulesStack.pop();
+						//System.out.print("(" + elementsOfRule[j] + ") ");
 					}
 					System.out.println();
+					nodeAst = TreeGrammarFactory.createGrammar(stateToAct, elementsOfRule);
+					System.out.println("AST: " + nodeAst);
+
 					// Muda para o estado do GoTo
                     int oldState = stateStack.peek();
                     stateStack.push(TRANSITION_TABLE[oldState][production[0]][1]);
+					rulesStack.push(nodeAst);
 					System.out.println("GoTo: " + TRANSITION_TABLE[oldState][production[0]][1]);
                     break;
                 case ERROR:

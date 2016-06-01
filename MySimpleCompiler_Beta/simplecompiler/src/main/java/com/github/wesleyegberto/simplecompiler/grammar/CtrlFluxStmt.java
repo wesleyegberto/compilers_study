@@ -3,10 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
+ * STMT → CTRL_FLUX
+ *
  * @author Wesley Egberto on 31/05/16.
  */
-public abstract class GrammarRule {
+public class CtrlFluxStmt extends Stmt {
+	//private CtrlFlux ctrlFlux;
 
-	// TODO: Definir argumento para controlar posição memória (array)
-	public abstract String generateCode(Table memory);
+	@Override
+	public String generateCode(Table memory) {
+		return null;
+	}
 }
