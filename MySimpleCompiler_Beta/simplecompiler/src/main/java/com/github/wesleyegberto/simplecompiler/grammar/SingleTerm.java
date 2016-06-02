@@ -3,17 +3,12 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * TERM → FACTOR
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 02/06/16.
  */
-public class ParamFunction extends Function {
-
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
-	}
+public class SingleTerm extends Term {
+	private Factor factor;
 
 	@Override
 	public String generateCode(Table memory) {

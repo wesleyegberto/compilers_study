@@ -3,16 +3,16 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * CTRL_FLUX → FOR
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 01/06/16.
  */
-public class ParamFunction extends Function {
+public class ForCtrlFlux extends CtrlFlux {
 
-	private Param param;
+	private For aFor;
 
-	public ParamFunction(Param param) {
-		this.param = param;
+	public ForCtrlFlux(For aFor) {
+		this.aFor = aFor;
 	}
 
 	@Override

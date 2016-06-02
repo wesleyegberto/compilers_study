@@ -3,16 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * OP_ARIT → OP_ARIT_HI
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 02/06/16.
  */
-public class ParamFunction extends Function {
+public class HighOpArit extends OpArit {
+	private OpAritHi opAritHi;
 
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
+	public HighOpArit(OpAritHi opAritHi) {
+		this.opAritHi = opAritHi;
 	}
 
 	@Override

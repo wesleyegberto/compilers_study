@@ -3,15 +3,17 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.lexer.Token;
 
 /**
+ * Fábrica de nós da Árvore Sintática Abstrata (Abstract Syntax Tree).
+ *
  * @author Wesley Egberto on 31/05/16.
  */
-public class TreeGrammarFactory {
+public class NodeASTFactory {
 
 	/**
-	 * Create a node of Abstract Syntax Tree.
-	 * @param indexRule index of the rule
-	 * @param args all elementos (terminal and variables) of the rule
-	 * @return node
+	 * Cria um nó da AST
+	 * @param indexRule índice da regra
+	 * @param args todos os elementos da regra (terminais e variáveis)
+	 * @return nó
 	 */
 	public static GrammarRule createGrammar(int indexRule, Object[] args) {
 

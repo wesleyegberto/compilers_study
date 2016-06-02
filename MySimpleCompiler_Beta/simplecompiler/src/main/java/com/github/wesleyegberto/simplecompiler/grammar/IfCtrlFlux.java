@@ -3,16 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * CTRL_FLUX → IF
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 01/06/16.
  */
-public class ParamFunction extends Function {
+public class IfCtrlFlux extends CtrlFlux {
+	private If anIf;
 
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
+	public IfCtrlFlux(If anIf) {
+		this.anIf = anIf;
 	}
 
 	@Override

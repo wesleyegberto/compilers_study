@@ -1,6 +1,6 @@
 package com.github.wesleyegberto.simplecompiler.parser;
 
-import com.github.wesleyegberto.simplecompiler.grammar.TreeGrammarFactory;
+import com.github.wesleyegberto.simplecompiler.grammar.NodeASTFactory;
 import com.github.wesleyegberto.simplecompiler.lexer.LexerAnalyzer;
 import com.github.wesleyegberto.simplecompiler.lexer.Token;
 import com.github.wesleyegberto.simplecompiler.lexer.TokenType;
@@ -169,7 +169,7 @@ public class SyntaticAnalyzer {
 						//System.out.print("(" + elementsOfRule[j] + ") ");
 					}
 					System.out.println();
-					nodeAst = TreeGrammarFactory.createGrammar(stateToAct, elementsOfRule);
+					nodeAst = NodeASTFactory.createGrammar(stateToAct, elementsOfRule);
 					System.out.println("AST: " + nodeAst);
 
 					// Muda para o estado do GoTo

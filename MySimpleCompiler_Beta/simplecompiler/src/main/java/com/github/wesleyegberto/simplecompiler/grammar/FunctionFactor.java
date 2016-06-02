@@ -3,16 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * FACTOR → FUNCTION
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 02/06/16.
  */
-public class ParamFunction extends Function {
+public class FunctionFactor extends Factor {
+	private Function function;
 
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
+	public FunctionFactor(Function function) {
+		this.function = function;
 	}
 
 	@Override

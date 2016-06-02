@@ -3,16 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * PARAMS → VAR
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 02/06/16.
  */
-public class ParamFunction extends Function {
+public class Param extends GrammarRule {
+	private Var var;
 
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
+	public Param(Var var) {
+		this.var = var;
 	}
 
 	@Override

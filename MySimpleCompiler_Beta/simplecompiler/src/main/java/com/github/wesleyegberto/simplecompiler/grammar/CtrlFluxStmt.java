@@ -8,7 +8,11 @@ import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
  * @author Wesley Egberto on 31/05/16.
  */
 public class CtrlFluxStmt extends Stmt {
-	//private CtrlFlux ctrlFlux;
+	private CtrlFlux ctrlFlux;
+
+	public CtrlFluxStmt(CtrlFlux ctrlFlux) {
+		this.ctrlFlux = ctrlFlux;
+	}
 
 	@Override
 	public String generateCode(Table memory) {

@@ -3,16 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * ELSE → else { STMT_LIST }
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 01/06/16.
  */
-public class ParamFunction extends Function {
+public class Else extends GrammarRule {
+	private StmtList stmtList;
 
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
+	public Else(StmtList stmtList) {
+		this.stmtList = stmtList;
 	}
 
 	@Override

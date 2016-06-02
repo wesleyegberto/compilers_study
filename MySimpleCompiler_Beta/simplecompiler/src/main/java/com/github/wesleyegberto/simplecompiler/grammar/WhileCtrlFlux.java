@@ -3,16 +3,15 @@ package com.github.wesleyegberto.simplecompiler.grammar;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
- * FUNCTION → id ( PARAMS )
+ * CTRL_FLUX → WHILE
  *
- * @author Wesley Egberto on 31/05/16.
+ * @author Wesley Egberto on 01/06/16.
  */
-public class ParamFunction extends Function {
+public class WhileCtrlFlux extends CtrlFlux {
+	private While aWhile;
 
-	private Param param;
-
-	public ParamFunction(Param param) {
-		this.param = param;
+	public WhileCtrlFlux(While aWhile) {
+		this.aWhile = aWhile;
 	}
 
 	@Override
