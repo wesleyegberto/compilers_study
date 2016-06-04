@@ -13,6 +13,17 @@ public class NoParamFunction extends Function {
 	private Token id;
 
 	public NoParamFunction(Token id) {
+		boolean exists = false;
+		for(String functionName : METHODS_WITHOUT_PARAMS) {
+			if(functionName.equals(id.getLexeme())) {
+				exists = true;
+				break;
+			}
+		}
+		if(!exists) {
+			System.out.println(id);
+			throw new IllegalArgumentException("Função sem parâmetro não identificada: " + id.getLexeme());
+		}
 		this.id = id;
 	}
 

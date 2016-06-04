@@ -22,6 +22,13 @@ public class OpBool extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "OpBool{" +
+			"opBool=" + opBool +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

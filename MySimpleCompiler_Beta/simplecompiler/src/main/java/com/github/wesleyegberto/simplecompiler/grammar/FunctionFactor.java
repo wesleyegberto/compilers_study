@@ -15,6 +15,13 @@ public class FunctionFactor extends Factor {
 	}
 
 	@Override
+	public String toString() {
+		return "FunctionFactor{" +
+			"function=" + function +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

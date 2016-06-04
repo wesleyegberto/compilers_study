@@ -22,6 +22,13 @@ public class OpAritHi extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "OpAritHi{" +
+			"opAritHigh=" + opAritHigh +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

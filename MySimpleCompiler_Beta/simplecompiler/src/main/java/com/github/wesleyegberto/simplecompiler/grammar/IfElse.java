@@ -21,6 +21,15 @@ public class IfElse extends If {
 	}
 
 	@Override
+	public String toString() {
+		return "IfElse{" +
+			"expBool=" + expBool +
+			", stmtList=" + stmtList +
+			", anElse=" + anElse +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

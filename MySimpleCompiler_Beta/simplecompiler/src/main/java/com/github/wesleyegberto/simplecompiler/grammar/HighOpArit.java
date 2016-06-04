@@ -15,6 +15,13 @@ public class HighOpArit extends OpArit {
 	}
 
 	@Override
+	public String toString() {
+		return "HighOpArit{" +
+			"opAritHi=" + opAritHi +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

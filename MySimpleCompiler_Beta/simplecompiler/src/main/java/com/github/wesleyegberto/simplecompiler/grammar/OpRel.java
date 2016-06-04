@@ -30,6 +30,13 @@ public class OpRel extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "OpRel{" +
+			"relop=" + relop +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

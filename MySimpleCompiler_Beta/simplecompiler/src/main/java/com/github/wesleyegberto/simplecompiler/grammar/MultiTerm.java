@@ -17,6 +17,14 @@ public class MultiTerm extends Term {
 	}
 
 	@Override
+	public String toString() {
+		return "MultiTerm{" +
+			"factor=" + factor +
+			", moreFactor=" + moreFactor +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

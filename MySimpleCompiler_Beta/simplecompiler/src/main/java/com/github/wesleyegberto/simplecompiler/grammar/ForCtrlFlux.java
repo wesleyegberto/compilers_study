@@ -16,6 +16,13 @@ public class ForCtrlFlux extends CtrlFlux {
 	}
 
 	@Override
+	public String toString() {
+		return "ForCtrlFlux{" +
+			"aFor=" + aFor +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

@@ -19,6 +19,15 @@ public class SingleExpBool extends ExpBool {
 	}
 
 	@Override
+	public String toString() {
+		return "SingleExpBool{" +
+			"firstExp=" + firstExp +
+			", opRel=" + opRel +
+			", secondExp=" + secondExp +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

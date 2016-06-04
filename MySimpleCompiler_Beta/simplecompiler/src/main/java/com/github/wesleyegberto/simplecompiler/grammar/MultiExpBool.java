@@ -21,6 +21,16 @@ public class MultiExpBool extends ExpBool {
 	}
 
 	@Override
+	public String toString() {
+		return "MultiExpBool{" +
+			"firstExp=" + firstExp +
+			", opRel=" + opRel +
+			", secondExp=" + secondExp +
+			", moreExpBool=" + moreExpBool +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

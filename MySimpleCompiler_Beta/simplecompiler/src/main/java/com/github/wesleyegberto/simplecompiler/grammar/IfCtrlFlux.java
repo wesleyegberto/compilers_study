@@ -15,6 +15,13 @@ public class IfCtrlFlux extends CtrlFlux {
 	}
 
 	@Override
+	public String toString() {
+		return "IfCtrlFlux{" +
+			"anIf=" + anIf +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

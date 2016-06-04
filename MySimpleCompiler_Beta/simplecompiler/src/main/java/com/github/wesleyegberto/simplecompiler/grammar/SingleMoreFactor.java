@@ -17,6 +17,14 @@ public class SingleMoreFactor extends MoreFactor {
 	}
 
 	@Override
+	public String toString() {
+		return "SingleMoreFactor{" +
+			"opAritHi=" + opAritHi +
+			", factor=" + factor +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

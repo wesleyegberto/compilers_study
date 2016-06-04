@@ -17,6 +17,14 @@ public class While extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "While{" +
+			"expBool=" + expBool +
+			", stmtList=" + stmtList +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

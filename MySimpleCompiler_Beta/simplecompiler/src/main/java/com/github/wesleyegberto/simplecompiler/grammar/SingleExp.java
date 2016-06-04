@@ -15,6 +15,13 @@ public class SingleExp extends Exp {
 	}
 
 	@Override
+	public String toString() {
+		return "SingleExp{" +
+			"term=" + term +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

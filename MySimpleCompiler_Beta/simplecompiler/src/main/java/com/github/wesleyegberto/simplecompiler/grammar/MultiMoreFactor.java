@@ -19,6 +19,15 @@ public class MultiMoreFactor extends MoreFactor {
 	}
 
 	@Override
+	public String toString() {
+		return "MultiMoreFactor{" +
+			"opAritHi=" + opAritHi +
+			", factor=" + factor +
+			", moreFactor=" + moreFactor +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

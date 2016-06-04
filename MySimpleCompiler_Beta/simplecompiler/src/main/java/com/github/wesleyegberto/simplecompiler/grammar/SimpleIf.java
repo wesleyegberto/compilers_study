@@ -17,6 +17,14 @@ public class SimpleIf extends If {
 	}
 
 	@Override
+	public String toString() {
+		return "SimpleIf{" +
+			"expBool=" + expBool +
+			", stmtList=" + stmtList +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

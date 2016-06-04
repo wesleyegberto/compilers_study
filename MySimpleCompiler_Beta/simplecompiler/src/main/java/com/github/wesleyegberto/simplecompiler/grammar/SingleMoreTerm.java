@@ -17,6 +17,14 @@ public class SingleMoreTerm extends MoreTerm {
 	}
 
 	@Override
+	public String toString() {
+		return "SingleMoreTerm{" +
+			"opAritLo=" + opAritLo +
+			", term=" + term +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

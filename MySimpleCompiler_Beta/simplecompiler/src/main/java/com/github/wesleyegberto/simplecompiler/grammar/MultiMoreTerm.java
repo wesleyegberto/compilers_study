@@ -19,6 +19,15 @@ public class MultiMoreTerm extends MoreTerm {
 	}
 
 	@Override
+	public String toString() {
+		return "MultiMoreTerm{" +
+			"opAritLo=" + opAritLo +
+			", term=" + term +
+			", moreTerm=" + moreTerm +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

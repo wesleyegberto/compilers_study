@@ -22,6 +22,13 @@ public class OpAritLo extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "OpAritLo{" +
+			"opAritLow=" + opAritLow +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

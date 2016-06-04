@@ -15,6 +15,13 @@ public class Else extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "Else{" +
+			"stmtList=" + stmtList +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

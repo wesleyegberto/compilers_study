@@ -22,6 +22,13 @@ public class Var extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "Var{" +
+			"var=" + var +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

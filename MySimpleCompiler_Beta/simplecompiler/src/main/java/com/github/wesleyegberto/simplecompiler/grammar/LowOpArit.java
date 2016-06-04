@@ -15,6 +15,13 @@ public class LowOpArit extends OpArit {
 	}
 
 	@Override
+	public String toString() {
+		return "LowOpArit{" +
+			"opAritLo=" + opAritLo +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

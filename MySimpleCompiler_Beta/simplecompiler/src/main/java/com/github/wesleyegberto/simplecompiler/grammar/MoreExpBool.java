@@ -17,6 +17,14 @@ public class MoreExpBool extends GrammarRule {
 	}
 
 	@Override
+	public String toString() {
+		return "MoreExpBool{" +
+			"opBool=" + opBool +
+			", expBool=" + expBool +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

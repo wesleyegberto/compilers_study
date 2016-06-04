@@ -13,13 +13,27 @@ public class For extends GrammarRule {
 	private Exp finalExp;
 	private OpArit opArit;
 	private Exp stepExp;
+	private StmtList stmtList;
 
-	public For(Exp initialExp, OpRel opRel, Exp finalExp, OpArit opArit, Exp stepExp) {
+	public For(Exp initialExp, OpRel opRel, Exp finalExp, OpArit opArit, Exp stepExp, StmtList stmtList) {
 		this.initialExp = initialExp;
 		this.opRel = opRel;
 		this.finalExp = finalExp;
 		this.opArit = opArit;
 		this.stepExp = stepExp;
+		this.stmtList = stmtList;
+	}
+
+	@Override
+	public String toString() {
+		return "For{" +
+			"initialExp=" + initialExp +
+			", opRel=" + opRel +
+			", finalExp=" + finalExp +
+			", opArit=" + opArit +
+			", stepExp=" + stepExp +
+			", stmtList=" + stmtList +
+			'}';
 	}
 
 	@Override

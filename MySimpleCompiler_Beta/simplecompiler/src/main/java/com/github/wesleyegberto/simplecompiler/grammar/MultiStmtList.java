@@ -18,6 +18,14 @@ public class MultiStmtList extends StmtList {
 	}
 
 	@Override
+	public String toString() {
+		return "MultiStmtList{" +
+			"stmt=" + stmt +
+			", stmtList=" + stmtList +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

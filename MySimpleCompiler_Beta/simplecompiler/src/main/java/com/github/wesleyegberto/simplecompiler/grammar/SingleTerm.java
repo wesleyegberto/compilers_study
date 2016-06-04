@@ -10,6 +10,17 @@ import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 public class SingleTerm extends Term {
 	private Factor factor;
 
+	public SingleTerm(Factor factor) {
+		this.factor = factor;
+	}
+
+	@Override
+	public String toString() {
+		return "SingleTerm{" +
+			"factor=" + factor +
+			'}';
+	}
+
 	@Override
 	public String generateCode(Table memory) {
 		return null;

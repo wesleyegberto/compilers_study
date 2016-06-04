@@ -15,6 +15,13 @@ public class WhileCtrlFlux extends CtrlFlux {
 	}
 
 	@Override
+	public String toString() {
+		return "WhileCtrlFlux{" +
+			"aWhile=" + aWhile +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}

@@ -17,6 +17,14 @@ public class MultiExp extends Exp {
 	}
 
 	@Override
+	public String toString() {
+		return "MultiExp{" +
+			"term=" + term +
+			", moreTerm=" + moreTerm +
+			'}';
+	}
+
+	@Override
 	public String generateCode(Table memory) {
 		return null;
 	}
