@@ -14,7 +14,7 @@ public class SyntaticAnalyzerTest {
 
 	@Test
 	public void Parse_SimpleProgram_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{metodo();}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{viraEsquerda();}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
@@ -42,35 +42,35 @@ public class SyntaticAnalyzerTest {
 
 	@Test
 	public void Parse_ProgramWithIf_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1.5){metodo();}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1.5){viraDireita();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithIfElse_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){metodo1();}else{metodo2();}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){viraDireita();}else{viraEsquerda();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithNestedIf_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){if(2<3){metodo1();}}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){if(2<3){viraEsquerda();}}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithNestedIfElse_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){if(2<3){metodo1();}else{metodo2();}}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){if(2<3){viraEsquerda();}else{viraDireita();}}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithIfUsingMethodInExpBool_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medeDistancia()<30){metodo();}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medeDistancia()<30){viraEsquerda();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
@@ -91,28 +91,28 @@ public class SyntaticAnalyzerTest {
 
 	@Test
 	public void Parse_ProgramWithWhile_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(2>1){metodo();}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(2>1){acendeLedVermelho();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithWhileManyExp_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(medeDistancia()<100 and 10 <= 20 and 40 > 4 and 1== 1 and 3 >= 3){metodo();}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(medeDistancia()<100 and 10 <= 20 and 40 > 4 and 1== 1 and 3 >= 3){viraDireita();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithTwoWhile_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(2>1){metodo();}while(3<5){metodo();}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(2>1){acendeLedVermelho();}while(3<5){viraEsquerda();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
 
 	@Test
 	public void Parse_ProgramWithNestedWhile_Parsed() {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(2>1){while(1<5){metodo();}}}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{while(2>1){while(1<5){viraDireita();}}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}
@@ -147,7 +147,7 @@ public class SyntaticAnalyzerTest {
 
 	@Test
 	public void Parse_GeneratedCode_Parsed() throws Exception {
-		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medirDistancia()<=20){acendeLedVermelho();viraDireita();apagaLedVermelho();}acendeLedVerde();for(i=1;i<=10;i=i+1){avancar(1);}apagaLedVerde();}").build();
+		SyntaticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medeDistancia()<=20){acendeLedVermelho();viraDireita();apagaLedVermelho();}acendeLedVerde();for(i=1;i<=10;i=i+1){avanca(1);}apagaLedVerde();}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
 	}

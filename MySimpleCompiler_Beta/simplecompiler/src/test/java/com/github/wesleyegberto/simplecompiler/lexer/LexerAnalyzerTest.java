@@ -501,4 +501,29 @@ public class LexerAnalyzerTest {
 			e.printStackTrace();
 		}
 	}
+
+	@Test
+	public void testTokenMethodCall() {
+		StringReader sr = new StringReader("method();");
+
+		try (BufferedReader br = new BufferedReader(sr)) {
+			LexerAnalyzer lexer = new LexerAnalyzer(new BufferedReader(br));
+
+			Token token = lexer.nextToken();
+			Assert.assertEquals(TokenType.ID, token.getTokenType());
+			Assert.assertEquals("method", token.getLexeme());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.LPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.SECO, token.getTokenType());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

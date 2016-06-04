@@ -117,7 +117,7 @@ public class LexerAnalyzer {
 			// Espacos em branco são ignorados, se houver um estado final então consome
 			if(inputChar == '\n' || inputChar == '\t' || inputChar == ' ') {
 				if (lastState > 0) {
-					lexeme.append((char) inputChar);
+					//lexeme.append((char) inputChar);
 					break;
 				}
 				eatInput(); // retirar o caracter ignorado da entrada
@@ -132,7 +132,7 @@ public class LexerAnalyzer {
 				state = nextState(state, inputChar);
 				// Sem transição para o estado
 				if(state < 0) {
-					lexeme.append((char) inputChar);
+					//lexeme.append((char) inputChar);
 					break;
 				}
 				// Se for um estado final
