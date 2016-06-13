@@ -21,7 +21,7 @@ public class SingleStmtList extends StmtList {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		stmt.generateCode(memory);
 	}
 }

@@ -25,7 +25,8 @@ public class MultiTerm extends Term {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		factor.generateCode(memory);
+		moreFactor.generateCode(memory);
 	}
 }

@@ -22,7 +22,7 @@ public class WhileCtrlFlux extends CtrlFlux {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		aWhile.generateCode(memory);
 	}
 }

@@ -22,7 +22,7 @@ public class SingleExp extends Exp {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		term.generateCode(memory);
 	}
 }

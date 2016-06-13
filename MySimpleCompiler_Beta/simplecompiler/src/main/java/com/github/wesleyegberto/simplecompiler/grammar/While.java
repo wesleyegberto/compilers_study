@@ -25,7 +25,8 @@ public class While extends GrammarRule {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		expBool.generateCode(memory);
+		stmtList.generateCode(memory);
 	}
 }

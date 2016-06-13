@@ -25,7 +25,9 @@ public class SimpleIf extends If {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		// TODO: Controle de fluxo
+		expBool.generateCode(memory);
+		stmtList.generateCode(memory);
 	}
 }

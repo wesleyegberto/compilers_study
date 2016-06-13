@@ -22,7 +22,7 @@ public class VarFactor extends Factor {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		var.generateCode(memory);
 	}
 }

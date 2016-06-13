@@ -22,7 +22,7 @@ public class FunctionFactor extends Factor {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		function.generateCode(memory);
 	}
 }

@@ -33,7 +33,11 @@ public class NoParamFunction extends Function {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return id.getLexeme();
+	public void generateCode(Table memory) {
+		char instructionCode = getInstructionFor(id.getLexeme());
+		if(instructionCode == '\0')
+			throw new IllegalArgumentException("Função não existe: " + id.getLexeme());
+
+		memory.addInstruction(instructionCode, "0");
 	}
 }

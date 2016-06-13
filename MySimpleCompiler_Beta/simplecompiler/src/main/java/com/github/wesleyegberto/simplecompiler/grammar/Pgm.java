@@ -20,7 +20,7 @@ public class Pgm extends GrammarRule {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return stmtList.generateCode(memory);
+	public void generateCode(Table memory) {
+		stmtList.generateCode(memory);
 	}
 }

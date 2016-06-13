@@ -28,7 +28,9 @@ public class MultiMoreFactor extends MoreFactor {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		opAritHi.generateCode(memory);
+		factor.generateCode(memory);
+		moreFactor.generateCode(memory);
 	}
 }

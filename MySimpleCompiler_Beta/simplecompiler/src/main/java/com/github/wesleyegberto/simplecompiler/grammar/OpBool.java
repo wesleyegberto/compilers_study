@@ -29,7 +29,11 @@ public class OpBool extends GrammarRule {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		if(opBool.getTokenType() == TokenType.AND) {
+			memory.addParamToArg("&");
+		} else {
+			memory.addParamToArg("|");
+		}
 	}
 }

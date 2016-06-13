@@ -29,7 +29,7 @@ public class OpAritLo extends GrammarRule {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		memory.addParamToArg(opAritLow.getLexeme());
 	}
 }

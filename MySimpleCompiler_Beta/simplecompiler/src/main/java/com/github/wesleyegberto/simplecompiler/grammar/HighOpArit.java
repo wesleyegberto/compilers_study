@@ -22,7 +22,7 @@ public class HighOpArit extends OpArit {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		opAritHi.generateCode(memory);
 	}
 }

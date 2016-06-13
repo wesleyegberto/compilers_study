@@ -36,7 +36,12 @@ public class ParamFunction extends Function {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		char instructionCode = getInstructionFor(id.getLexeme());
+		if(instructionCode == '\0')
+			throw new IllegalArgumentException("Função não existe: " + id.getLexeme());
+
+		param.generateCode(memory);
+		memory.addInstruction(instructionCode);
 	}
 }

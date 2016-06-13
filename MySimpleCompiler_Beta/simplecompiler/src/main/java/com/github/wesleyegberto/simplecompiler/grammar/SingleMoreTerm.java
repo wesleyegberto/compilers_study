@@ -25,7 +25,8 @@ public class SingleMoreTerm extends MoreTerm {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		opAritLo.generateCode(memory);
+		term.generateCode(memory);
 	}
 }

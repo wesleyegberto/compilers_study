@@ -22,7 +22,7 @@ public class CtrlFluxStmt extends Stmt {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		ctrlFlux.generateCode(memory);
 	}
 }

@@ -37,7 +37,7 @@ public class OpRel extends GrammarRule {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		memory.addParamToArg(relop.getLexeme());
 	}
 }

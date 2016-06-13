@@ -1,7 +1,5 @@
 package com.github.wesleyegberto.simplecompiler.grammar;
 
-import com.github.wesleyegberto.simplecompiler.grammar.If;
-import com.github.wesleyegberto.simplecompiler.grammar.StmtList;
 import com.github.wesleyegberto.simplecompiler.grammar.ast.Table;
 
 /**
@@ -30,7 +28,10 @@ public class IfElse extends If {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		// TODO: Controle de fluxo
+		expBool.generateCode(memory);
+		stmtList.generateCode(memory);
+		anElse.generateCode(memory);
 	}
 }

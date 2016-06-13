@@ -25,7 +25,8 @@ public class MultiExp extends Exp {
 	}
 
 	@Override
-	public String generateCode(Table memory) {
-		return null;
+	public void generateCode(Table memory) {
+		term.generateCode(memory);
+		moreTerm.generateCode(memory);
 	}
 }
