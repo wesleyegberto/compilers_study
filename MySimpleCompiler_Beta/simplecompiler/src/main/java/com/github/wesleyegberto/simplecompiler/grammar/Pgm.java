@@ -22,5 +22,7 @@ public class Pgm extends GrammarRule {
 	@Override
 	public void generateCode(Table memory) {
 		stmtList.generateCode(memory);
+		// Adiciona o fim de instruções
+		memory.addInstruction('$', "");
 	}
 }

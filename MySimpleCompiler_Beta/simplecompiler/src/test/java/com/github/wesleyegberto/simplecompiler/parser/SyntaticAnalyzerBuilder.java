@@ -17,7 +17,7 @@ public class SyntaticAnalyzerBuilder {
 	}
 
 
-	public SyntaticAnalyzer build() {
-		return new SyntaticAnalyzer(lexer);
+	public SyntacticAnalyzer build() {
+		return new SyntacticAnalyzer(lexer);
 	}
 }

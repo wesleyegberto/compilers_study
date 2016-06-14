@@ -16,7 +16,7 @@ public class Table {
 		return currentIndex;
 	}
 
-	public int getNumberLines() {
+	public int getTotalInstructions() {
 		return commands.size();
 	}
 
@@ -36,5 +36,16 @@ public class Table {
 	public void addInstruction(char code, String arg) {
 		incrementIndex();
 		commands.add(code + arg);
+	}
+
+	public String streamCode() {
+		return String.join("|", commands);
+	}
+
+	public void copyFrom(Table instructionToJump) {
+		for(String cmd : instructionToJump.commands) {
+			commands.add(cmd);
+			incrementIndex();
+		}
 	}
 }
