@@ -12,6 +12,10 @@ public class Table {
 
 	private List<String> commands = new ArrayList<>();
 
+	public void setCurrentIndex(int currentIndex) {
+		this.currentIndex = currentIndex;
+	}
+
 	public int getCurrentIndex() {
 		return currentIndex;
 	}
@@ -46,6 +50,16 @@ public class Table {
 		for(String cmd : instructionToJump.commands) {
 			commands.add(cmd);
 			incrementIndex();
+		}
+	}
+
+	public void copyArgFrom(Table functionToUse) {
+		if(functionToUse.getTotalInstructions() > 0) {
+			// Extrai a função e adiciona como argumento
+			String cmd = functionToUse.commands.get(0);
+			addParamToArg(String.valueOf(cmd.charAt(0)));
+		} else {
+			addParamToArg(functionToUse.currentArg);
 		}
 	}
 }

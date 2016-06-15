@@ -69,27 +69,39 @@ public class SyntacticAnalyzerTest {
 		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1.5){viraDireita();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("c2>1.5|z3|d0|$"));
+	}
+
+	@Test
+	public void Parse_ProgramWithIfMethod_Parsed() {
+		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medeDistancia()>20){avanca(1);}}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm>20|z3|w1|$"));
 	}
 
 	@Test
 	public void Parse_ProgramWithIfElse_Parsed() {
-		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){viraDireita();}else{viraEsquerda();}}").build();
+		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){viraDireita();avanca(1);}else{viraEsquerda();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("c2>1|z5|d0|w1|j6|a0|$"));
 	}
 
 	@Test
 	public void Parse_ProgramWithNestedIf_Parsed() {
-		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){if(2<3){viraEsquerda();}}}").build();
+		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medeDistancia()>20){if(5<10){avanca(1);}}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm>20|z5|c5<10|z5|w1|$"));
 	}
 
 	@Test
 	public void Parse_ProgramWithNestedIfElse_Parsed() {
-		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(2>1){if(2<3){viraEsquerda();}else{viraDireita();}}}").build();
+		SyntacticAnalyzer parser = SyntaticAnalyzerBuilder.from("program{if(medeDistancia()>20){if(2<3){viraEsquerda();}else{viraDireita();}}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm>20|z7|c2<3|z6|a0|j7|d0|$"));
 	}
 
 	@Test

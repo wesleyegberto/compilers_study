@@ -26,12 +26,13 @@ public class SimpleIf extends If {
 
 	@Override
 	public void generateCode(Table memory) {
-		// TODO: Controle de fluxo
 		// Adiciona a intrução de comparação: c3<4, c10>5, c2+2>3
 		expBool.generateCode(memory);
 		memory.addInstruction('c');
 
 		Table instructionToJump = new Table();
+		// A linha atual é para instrução de salto, por isso soma 1
+		instructionToJump.setCurrentIndex(memory.getCurrentIndex() + 1);
 		stmtList.generateCode(instructionToJump);
 
 		// O desvio é setado para a próxima linha depois da última instrução interna
