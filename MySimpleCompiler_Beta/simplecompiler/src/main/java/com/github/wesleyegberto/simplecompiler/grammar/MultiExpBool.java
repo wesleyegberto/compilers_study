@@ -32,9 +32,16 @@ public class MultiExpBool extends ExpBool {
 
 	@Override
 	public void generateCode(Table memory) {
-		firstExp.generateCode(memory);
+		Table functionToUse = new Table();
+		firstExp.generateCode(functionToUse);
+		memory.copyArgFrom(functionToUse);
+
 		opRel.generateCode(memory);
-		secondExp.generateCode(memory);
+
+		functionToUse.clearAll();
+		secondExp.generateCode(functionToUse);
+		memory.copyArgFrom(functionToUse);
+
 		moreExpBool.generateCode(memory);
 	}
 }

@@ -32,7 +32,11 @@ public class SingleExpBool extends ExpBool {
 		Table functionToUse = new Table();
 		firstExp.generateCode(functionToUse);
 		memory.copyArgFrom(functionToUse);
+
 		opRel.generateCode(memory);
-		secondExp.generateCode(memory);
+
+		functionToUse.clearAll();
+		secondExp.generateCode(functionToUse);
+		memory.copyArgFrom(functionToUse);
 	}
 }
