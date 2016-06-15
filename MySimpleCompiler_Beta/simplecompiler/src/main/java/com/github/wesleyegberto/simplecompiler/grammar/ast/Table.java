@@ -46,6 +46,12 @@ public class Table {
 		return String.join("|", commands);
 	}
 
+	public void clearAll() {
+		commands.clear();
+		currentArg = "";
+		currentIndex = 0;
+	}
+
 	public void copyFrom(Table instructionToJump) {
 		for(String cmd : instructionToJump.commands) {
 			commands.add(cmd);
