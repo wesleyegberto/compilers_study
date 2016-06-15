@@ -101,6 +101,23 @@ public class SyntacticAnalyzerTest {
 		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{if(medeDistancia()<30){viraEsquerda();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm<30|z3|a0|$"));
+	}
+
+	@Test
+	public void Parse_ProgramWithIfUsingTwoMethodInExpBool_Parsed() {
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{if(medeDistancia()<=medeDistancia()){avanca(1);}}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm<=m|z3|w1|$"));
+	}
+
+	@Test
+	public void Parse_ProgramWithIfUsingManyMethodInExpBool_Parsed() {
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{if(medeDistancia()>10 and medeDistancia()<30){avanca(1);}}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm>10&m<30|z3|w1|$"));
 	}
 
 	@Test
@@ -125,6 +142,7 @@ public class SyntacticAnalyzerTest {
 		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{if(medeDistancia()<=50 and 3==3 and 3<=4 and 5 > 5 and 8 >= 3){avanca(1);}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("cm<=50&3==3&3<=4&5>5&8>=3|z3|w1|$"));
 	}
 
 	@Test
@@ -132,7 +150,17 @@ public class SyntacticAnalyzerTest {
 		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{while(2>1){acendeLedVermelho();}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("c2>1|z4|r0|j0|$"));
 	}
+
+	@Test
+	public void Parse_ProgramWithCommandWhile_Parsed() {
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{avanca(1);while(medeDistancia()<=20){acendeLedVermelho();}}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("w1|cm<=20|z5|r0|j1|$"));
+	}
+
 
 	@Test
 	public void Parse_ProgramWithWhileManyExp_Parsed() {

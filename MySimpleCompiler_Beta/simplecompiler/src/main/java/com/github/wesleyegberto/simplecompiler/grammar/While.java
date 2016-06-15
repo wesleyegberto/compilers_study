@@ -26,7 +26,24 @@ public class While extends GrammarRule {
 
 	@Override
 	public void generateCode(Table memory) {
+		// Adiciona a intrução de comparação
+		int initialLine = memory.getCurrentIndex();
 		expBool.generateCode(memory);
-		stmtList.generateCode(memory);
+		memory.addInstruction('c');
+
+		Table instructionToJump = new Table();
+		// A linha atual é para instrução de salto, por isso soma 1
+		instructionToJump.setCurrentIndex(memory.getCurrentIndex() + 1);
+		stmtList.generateCode(instructionToJump);
+
+		// O desvio é setado para a próxima linha depois da última instrução de salto
+		int lineToJump = memory.getCurrentIndex() + instructionToJump.getTotalInstructions() + 2;
+		// Adiciona a instrução de salto condicional (desvio registrador de comparação for 0)
+		memory.addInstruction('z', String.valueOf(lineToJump));
+
+		memory.copyFrom(instructionToJump);
+
+		// Adiciona a instrução de salto para voltar à comparação do loop
+		memory.addInstruction('j', String.valueOf(initialLine));
 	}
 }
