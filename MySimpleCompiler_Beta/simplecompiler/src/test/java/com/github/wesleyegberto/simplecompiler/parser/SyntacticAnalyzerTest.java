@@ -42,6 +42,13 @@ public class SyntacticAnalyzerTest {
 	}
 
 	@Test
+	public void Parse_ProgramCallMethodArgMethod_Parsed() {
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{avanca(1.5);}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+	}
+
+	@Test
 	public void Parse_ProgramCallManyMethods_Parsed() throws Exception {
 		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{avanca(2);avanca(5);viraEsquerda();avanca(5);viraDireita();}").build();
 		boolean parsed = parser.parse();
@@ -188,6 +195,7 @@ public class SyntacticAnalyzerTest {
 		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{for(i=0;i<10;i=i+1){avanca(1);}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+		assertThat(getGeneratedCode(parser), is("i0|cc<10|z6|w1|p1|j1|$"));
 	}
 
 	@Test
@@ -216,5 +224,20 @@ public class SyntacticAnalyzerTest {
 		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{if(medeDistancia()<=20){acendeLedVermelho();viraDireita();apagaLedVermelho();}acendeLedVerde();for(i=1;i<=10;i=i+1){avanca(1);}apagaLedVerde();}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void Parse_GeneratedCodeWithErro_Parsed() throws Exception {
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{recua(4);avanca(2);recua();if(medirDistancia()<medirDistancia()){avanca(3);}}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+	}
+
+	@Test
+	public void Parse_GeneratedCodeToSample_Parsed() throws Exception {
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{acendeLedVerde();if(medeDistancia()>=20){avanca(1);}apagaLedVerde();}").build();
+		boolean parsed = parser.parse();
+		assertThat(parsed, is(true));
+		getGeneratedCode(parser);
 	}
 }

@@ -152,7 +152,7 @@ public class SyntacticAnalyzer {
             switch (action) {
                 case SUCCESS:
 					generatedSyntacticTree = (GrammarRule) rulesStack.pop();
-					System.out.println("Last elem: " + generatedSyntacticTree);
+					//System.out.println("Last elem: " + generatedSyntacticTree);
 					return true;
                 case SHIFT:
                     // empilha o estado
@@ -174,7 +174,11 @@ public class SyntacticAnalyzer {
 						//System.out.print(stateStack.pop() + " ");
 						// A ordem dos elementos da regra está invertida (pilha)
 						elementsOfRule[j] = rulesStack.pop();
-						//System.out.print("(" + elementsOfRule[j] + ") ");
+						/*if(elementsOfRule[j] instanceof Token) {
+							System.out.print("(" + ((Token)elementsOfRule[j]).getTokenType() + ") ");
+						} else if(elementsOfRule[j] instanceof GrammarRule) {
+							System.out.print("(" + ((GrammarRule)elementsOfRule[j]).getClass().getSimpleName() + ") ");
+						}*/
 					}
 					//System.out.println();
 					nodeAst = NodeASTFactory.createGrammar(stateToAct, elementsOfRule);

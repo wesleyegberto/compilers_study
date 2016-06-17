@@ -526,4 +526,73 @@ public class LexerAnalyzerTest {
 			e.printStackTrace();
 		}
 	}
+
+	@Test
+	public void testTokenFullSintax() {
+		StringReader sr = new StringReader("program{if(medeDistancia()<10){avanca(1);}}");
+
+		try (BufferedReader br = new BufferedReader(sr)) {
+			LexerAnalyzer lexer = new LexerAnalyzer(new BufferedReader(br));
+
+			Token token = lexer.nextToken();
+			Assert.assertEquals(TokenType.PROGRAM, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.LCURB, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.IF, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.LPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals("medeDistancia", token.getLexeme());
+			Assert.assertEquals(TokenType.ID, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.LPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RELOP_LT, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals("10", token.getLexeme());
+			Assert.assertEquals(TokenType.NUM, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.LCURB, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals("avanca", token.getLexeme());
+			Assert.assertEquals(TokenType.ID, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.LPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals("1", token.getLexeme());
+			Assert.assertEquals(TokenType.NUM, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RPAR, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.SECO, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RCURB, token.getTokenType());
+
+			token = lexer.nextToken();
+			Assert.assertEquals(TokenType.RCURB, token.getTokenType());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
