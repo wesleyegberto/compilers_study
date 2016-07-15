@@ -43,7 +43,7 @@ public class SyntacticAnalyzer {
     // Bloco estatico para iniciar TRANSITION_TABLE
     static {
         File f = new File("parser_transition_table.dat");
-        // Lista de stados
+		// Lista de stados
         List<int[][]> states = new ArrayList<>();
         String line = null;
         //System.out.println(f.getAbsolutePath());
@@ -63,7 +63,7 @@ public class SyntacticAnalyzer {
         } catch (NumberFormatException ex) {
             throw new RuntimeException("Erro ao efetuar leitura de estado: " + ex.getMessage());
         } catch (IOException ex) {
-            throw new RuntimeException("Erro ao efetuar leitura do arquivo com estados do parser: " + ex.getMessage());
+            throw new RuntimeException("Erro ao efetuar leitura do arquivo com estados do parser: " + f.getAbsolutePath());
         }
         TRANSITION_TABLE = states.toArray(new int[][][] {});
 

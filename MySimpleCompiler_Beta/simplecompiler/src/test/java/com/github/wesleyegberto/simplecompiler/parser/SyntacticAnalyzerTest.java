@@ -192,10 +192,10 @@ public class SyntacticAnalyzerTest {
 
 	@Test
 	public void Parse_ProgramWithFor_Parsed() {
-		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{for(i=0;i<10;i=i+1){avanca(1);}}").build();
+		SyntacticAnalyzer parser = SyntacticAnalyzerBuilder.from("program{for(i=1;i<=10;i=i+1){avanca(1);}}").build();
 		boolean parsed = parser.parse();
 		assertThat(parsed, is(true));
-		assertThat(getGeneratedCode(parser), is("i0|cc<10|z6|w1|p1|j1|$"));
+		assertThat(getGeneratedCode(parser), is("i1|cc<=10|z6|w1|p1|j1|$"));
 	}
 
 	@Test

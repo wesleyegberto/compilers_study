@@ -1,7 +1,7 @@
 package com.github.wesleyegberto.simplecompiler.parser;
 
 /**
- * Created by wesley on 05/04/16.
+ * @author Wesley Egberto
  */
 public class ParserException extends RuntimeException {
 	private static final long serialVersionUID = 2153733039112318838L;
